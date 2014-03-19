@@ -1,0 +1,2686 @@
+﻿@model DiscGolf.Models.Card
+
+@{
+    ViewBag.Title = "You GO! " + User.Identity.Name;
+    ViewBag.Hole1 = "HOLE 1";
+    ViewBag.Hole2 = "HOLE 2";
+    ViewBag.Hole3 = "HOLE 3";
+    ViewBag.Hole4 = "HOLE 4";
+    ViewBag.Hole5 = "HOLE 5";
+    ViewBag.Hole6 = "HOLE 6";
+    ViewBag.Hole7 = "HOLE 7";
+    ViewBag.Hole8 = "HOLE 8";
+    ViewBag.Hole9 = "HOLE 9";
+    ViewBag.Hole10 = "HOLE 10";
+    ViewBag.Hole11 = "HOLE 11";
+    ViewBag.Hole12 = "HOLE 12";
+    ViewBag.Hole13 = "HOLE 13";
+    ViewBag.Hole14 = "HOLE 14";
+    ViewBag.Hole15 = "HOLE 15";
+    ViewBag.Hole16 = "HOLE 16";
+    ViewBag.Hole17 = "HOLE 17";
+    ViewBag.Hole18 = "HOLE 18";
+    
+}
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Card</legend>
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="editor-label">
+            @Html.HiddenFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.HiddenFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+@*----------------------------------------------------------------------------------------------------------------------h1*@
+@if (Model.h1 == 0 && Model.h2 == 0 && Model.h3 == 0 && Model.h4 == 0 && Model.h5 == 0 && Model.h6 == 0 && Model.h7 == 0 && Model.h8 == 0 && Model.h9 == 0 && Model.h10 == 0 && Model.h11 == 0 && Model.h12 == 0 && Model.h13 == 0 && Model.h14 == 0 && Model.h15 == 0 && Model.h16 == 0 && Model.h17 == 0 && Model.h18 == 0)
+{
+            <div class="editor-label">
+             <strong>@ViewBag.Hole1</strong>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.h1)
+            @Html.ValidationMessageFor(model => model.h1)
+        </div>
+
+            <div class="editor-label">
+            @Html.HiddenFor(model => model.h2)
+        </div>
+        <div class="editor-field">
+            @Html.HiddenFor(model => model.h2)
+            @Html.ValidationMessageFor(model => model.h2)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h3)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h3)
+            @Html.ValidationMessageFor(model => model.h3)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h4)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h4)
+            @Html.ValidationMessageFor(model => model.h4)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h5)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h5)
+            @Html.ValidationMessageFor(model => model.h5)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h6)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h6)
+            @Html.ValidationMessageFor(model => model.h6)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h7)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h7)
+            @Html.ValidationMessageFor(model => model.h7)
+        </div>
+		
+		<div class="editor-label">
+            @Html.HiddenFor(model => model.h8)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h8)
+            @Html.ValidationMessageFor(model => model.h8)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h9)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h9)
+            @Html.ValidationMessageFor(model => model.h9)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h10)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h10)
+            @Html.ValidationMessageFor(model => model.h10)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h11)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h11)
+            @Html.ValidationMessageFor(model => model.h11)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h12)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h12)
+            @Html.ValidationMessageFor(model => model.h12)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h13)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h13)
+            @Html.ValidationMessageFor(model => model.h13)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h14)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h14)
+            @Html.ValidationMessageFor(model => model.h14)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h15)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h15)
+            @Html.ValidationMessageFor(model => model.h15)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h16)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h16)
+            @Html.ValidationMessageFor(model => model.h16)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h17)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h17)
+            @Html.ValidationMessageFor(model => model.h17)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h18)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h18)
+            @Html.ValidationMessageFor(model => model.h18)
+        </div>}
+              @*----------------------------------------------------------------------------------------------------------------------h2*@
+                            else if(Model.h1!=0 && Model.h2 ==0 && Model.h3==0 && Model.h4 ==0 && Model.h5==0 && Model.h6 ==0 && Model.h7==0 && Model.h8 ==0 && Model.h9==0 && Model.h10 ==0 && Model.h11==0 && Model.h12 ==0 && Model.h13==0 && Model.h14 ==0 && Model.h15==0 && Model.h16 ==0 && Model.h17==0 && Model.h18 ==0 ){
+        <div class="editor-label">
+            @Html.HiddenFor(model => model.h1)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h1)
+            @Html.ValidationMessageFor(model => model.h1)
+        </div>							
+							
+        <div class="editor-label">
+            <strong>@ViewBag.Hole2</strong>
+        </div>
+        <div class="editor-field">      
+            @Html.EditorFor(model => model.h2)
+            @Html.ValidationMessageFor(model => model.h2)
+        </div>
+		
+		 <div class="editor-label">
+            @Html.HiddenFor(model => model.h3)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h3)
+            @Html.ValidationMessageFor(model => model.h3)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h4)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h4)
+            @Html.ValidationMessageFor(model => model.h4)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h5)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h5)
+            @Html.ValidationMessageFor(model => model.h5)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h6)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h6)
+            @Html.ValidationMessageFor(model => model.h6)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h7)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h7)
+            @Html.ValidationMessageFor(model => model.h7)
+        </div>
+		
+		<div class="editor-label">
+            @Html.HiddenFor(model => model.h8)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h8)
+            @Html.ValidationMessageFor(model => model.h8)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h9)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h9)
+            @Html.ValidationMessageFor(model => model.h9)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h10)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h10)
+            @Html.ValidationMessageFor(model => model.h10)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h11)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h11)
+            @Html.ValidationMessageFor(model => model.h11)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h12)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h12)
+            @Html.ValidationMessageFor(model => model.h12)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h13)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h13)
+            @Html.ValidationMessageFor(model => model.h13)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h14)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h14)
+            @Html.ValidationMessageFor(model => model.h14)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h15)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h15)
+            @Html.ValidationMessageFor(model => model.h15)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h16)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h16)
+            @Html.ValidationMessageFor(model => model.h16)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h17)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h17)
+            @Html.ValidationMessageFor(model => model.h17)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h18)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h18)
+            @Html.ValidationMessageFor(model => model.h18)
+        </div>
+}
+ @*----------------------------------------------------------------------------------------------------------------------h3*@
+                            else if(Model.h1!=0 && Model.h2 !=0 && Model.h3==0 && Model.h4==0 && Model.h5==0 && Model.h6 ==0 && Model.h7==0 && Model.h8 ==0 && Model.h9==0 && Model.h10 ==0 && Model.h11==0 && Model.h12 ==0 && Model.h13==0 && Model.h14 ==0 && Model.h15==0 && Model.h16 ==0 && Model.h17==0 && Model.h18 ==0 ){
+        <div class="editor-label">
+            @Html.HiddenFor(model => model.h1)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h1)
+            @Html.ValidationMessageFor(model => model.h1)
+        </div>							
+							
+        <div class="editor-label">
+            @Html.HiddenFor(model => model.h2)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h2)
+            @Html.ValidationMessageFor(model => model.h2)
+        </div>
+		
+		 <div class="editor-label">
+            <strong>@ViewBag.Hole3</strong>
+        </div>
+        <div class="editor-field">      
+            @Html.EditorFor(model => model.h3)
+            @Html.ValidationMessageFor(model => model.h3)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h4)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h4)
+            @Html.ValidationMessageFor(model => model.h4)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h5)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h5)
+            @Html.ValidationMessageFor(model => model.h5)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h6)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h6)
+            @Html.ValidationMessageFor(model => model.h6)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h7)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h7)
+            @Html.ValidationMessageFor(model => model.h7)
+        </div>
+		
+		<div class="editor-label">
+            @Html.HiddenFor(model => model.h8)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h8)
+            @Html.ValidationMessageFor(model => model.h8)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h9)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h9)
+            @Html.ValidationMessageFor(model => model.h9)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h10)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h10)
+            @Html.ValidationMessageFor(model => model.h10)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h11)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h11)
+            @Html.ValidationMessageFor(model => model.h11)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h12)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h12)
+            @Html.ValidationMessageFor(model => model.h12)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h13)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h13)
+            @Html.ValidationMessageFor(model => model.h13)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h14)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h14)
+            @Html.ValidationMessageFor(model => model.h14)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h15)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h15)
+            @Html.ValidationMessageFor(model => model.h15)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h16)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h16)
+            @Html.ValidationMessageFor(model => model.h16)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h17)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h17)
+            @Html.ValidationMessageFor(model => model.h17)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h18)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h18)
+            @Html.ValidationMessageFor(model => model.h18)
+        </div>
+}
+@*----------------------------------------------------------------------------------------------------------------------h4*@
+                            else if(Model.h1!=0 && Model.h2 !=0 && Model.h3!=0 && Model.h4==0 && Model.h5==0 && Model.h6 ==0 && Model.h7==0 && Model.h8 ==0 && Model.h9==0 && Model.h10 ==0 && Model.h11==0 && Model.h12 ==0 && Model.h13==0 && Model.h14 ==0 && Model.h15==0 && Model.h16 ==0 && Model.h17==0 && Model.h18 ==0 ){
+        <div class="editor-label">
+            @Html.HiddenFor(model => model.h1)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h1)
+            @Html.ValidationMessageFor(model => model.h1)
+        </div>							
+							
+        <div class="editor-label">
+            @Html.HiddenFor(model => model.h2)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h2)
+            @Html.ValidationMessageFor(model => model.h2)
+        </div>
+		
+		 <div class="editor-label">
+            @Html.HiddenFor(model => model.h3)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h3)
+            @Html.ValidationMessageFor(model => model.h3)
+        </div>
+		
+				 <div class="editor-label">
+            <strong>@ViewBag.Hole4</strong>
+        </div>
+        <div class="editor-field">      
+            @Html.EditorFor(model => model.h4)
+            @Html.ValidationMessageFor(model => model.h4)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h5)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h5)
+            @Html.ValidationMessageFor(model => model.h5)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h6)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h6)
+            @Html.ValidationMessageFor(model => model.h6)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h7)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h7)
+            @Html.ValidationMessageFor(model => model.h7)
+        </div>
+		
+		<div class="editor-label">
+            @Html.HiddenFor(model => model.h8)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h8)
+            @Html.ValidationMessageFor(model => model.h8)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h9)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h9)
+            @Html.ValidationMessageFor(model => model.h9)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h10)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h10)
+            @Html.ValidationMessageFor(model => model.h10)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h11)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h11)
+            @Html.ValidationMessageFor(model => model.h11)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h12)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h12)
+            @Html.ValidationMessageFor(model => model.h12)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h13)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h13)
+            @Html.ValidationMessageFor(model => model.h13)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h14)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h14)
+            @Html.ValidationMessageFor(model => model.h14)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h15)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h15)
+            @Html.ValidationMessageFor(model => model.h15)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h16)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h16)
+            @Html.ValidationMessageFor(model => model.h16)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h17)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h17)
+            @Html.ValidationMessageFor(model => model.h17)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h18)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h18)
+            @Html.ValidationMessageFor(model => model.h18)
+        </div>
+}
+@*----------------------------------------------------------------------------------------------------------------------h5*@
+                            else if(Model.h1!=0 && Model.h2 !=0 && Model.h3!=0 && Model.h4 !=0 && Model.h5==0 && Model.h6 ==0 && Model.h7==0 && Model.h8 ==0 && Model.h9==0 && Model.h10 ==0 && Model.h11==0 && Model.h12 ==0 && Model.h13==0 && Model.h14 ==0 && Model.h15==0 && Model.h16 ==0 && Model.h17==0 && Model.h18 ==0 ){
+        <div class="editor-label">
+            @Html.HiddenFor(model => model.h1)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h1)
+            @Html.ValidationMessageFor(model => model.h1)
+        </div>							
+							
+        <div class="editor-label">
+            @Html.HiddenFor(model => model.h2)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h2)
+            @Html.ValidationMessageFor(model => model.h2)
+        </div>
+		
+		 <div class="editor-label">
+            @Html.HiddenFor(model => model.h3)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h3)
+            @Html.ValidationMessageFor(model => model.h3)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h4)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h4)
+            @Html.ValidationMessageFor(model => model.h4)
+        </div>
+		
+				 <div class="editor-label">
+           <strong>@ViewBag.Hole5</strong>
+        </div>
+        <div class="editor-field">      
+            @Html.EditorFor(model => model.h5)
+            @Html.ValidationMessageFor(model => model.h5)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h6)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h6)
+            @Html.ValidationMessageFor(model => model.h6)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h7)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h7)
+            @Html.ValidationMessageFor(model => model.h7)
+        </div>
+		
+		<div class="editor-label">
+            @Html.HiddenFor(model => model.h8)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h8)
+            @Html.ValidationMessageFor(model => model.h8)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h9)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h9)
+            @Html.ValidationMessageFor(model => model.h9)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h10)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h10)
+            @Html.ValidationMessageFor(model => model.h10)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h11)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h11)
+            @Html.ValidationMessageFor(model => model.h11)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h12)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h12)
+            @Html.ValidationMessageFor(model => model.h12)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h13)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h13)
+            @Html.ValidationMessageFor(model => model.h13)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h14)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h14)
+            @Html.ValidationMessageFor(model => model.h14)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h15)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h15)
+            @Html.ValidationMessageFor(model => model.h15)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h16)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h16)
+            @Html.ValidationMessageFor(model => model.h16)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h17)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h17)
+            @Html.ValidationMessageFor(model => model.h17)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h18)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h18)
+            @Html.ValidationMessageFor(model => model.h18)
+        </div>
+}
+@*----------------------------------------------------------------------------------------------------------------------h6*@
+                            else if(Model.h1!=0 && Model.h2 !=0 && Model.h3!=0 && Model.h4 !=0 && Model.h5!=0 && Model.h6 ==0 && Model.h7==0 && Model.h8 ==0 && Model.h9==0 && Model.h10 ==0 && Model.h11==0 && Model.h12 ==0 && Model.h13==0 && Model.h14 ==0 && Model.h15==0 && Model.h16 ==0 && Model.h17==0 && Model.h18 ==0 ){
+        <div class="editor-label">
+            @Html.HiddenFor(model => model.h1)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h1)
+            @Html.ValidationMessageFor(model => model.h1)
+        </div>							
+							
+        <div class="editor-label">
+            @Html.HiddenFor(model => model.h2)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h2)
+            @Html.ValidationMessageFor(model => model.h2)
+        </div>
+		
+		 <div class="editor-label">
+            @Html.HiddenFor(model => model.h3)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h3)
+            @Html.ValidationMessageFor(model => model.h3)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h4)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h4)
+            @Html.ValidationMessageFor(model => model.h4)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h5)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h5)
+            @Html.ValidationMessageFor(model => model.h5)
+        </div>
+		
+				 <div class="editor-label">
+            <strong>@ViewBag.Hole6</strong>
+        </div>
+        <div class="editor-field">      
+            @Html.EditorFor(model => model.h6)
+            @Html.ValidationMessageFor(model => model.h6)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h7)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h7)
+            @Html.ValidationMessageFor(model => model.h7)
+        </div>
+		
+		<div class="editor-label">
+            @Html.HiddenFor(model => model.h8)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h8)
+            @Html.ValidationMessageFor(model => model.h8)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h9)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h9)
+            @Html.ValidationMessageFor(model => model.h9)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h10)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h10)
+            @Html.ValidationMessageFor(model => model.h10)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h11)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h11)
+            @Html.ValidationMessageFor(model => model.h11)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h12)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h12)
+            @Html.ValidationMessageFor(model => model.h12)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h13)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h13)
+            @Html.ValidationMessageFor(model => model.h13)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h14)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h14)
+            @Html.ValidationMessageFor(model => model.h14)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h15)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h15)
+            @Html.ValidationMessageFor(model => model.h15)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h16)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h16)
+            @Html.ValidationMessageFor(model => model.h16)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h17)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h17)
+            @Html.ValidationMessageFor(model => model.h17)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h18)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h18)
+            @Html.ValidationMessageFor(model => model.h18)
+        </div>
+}
+@*----------------------------------------------------------------------------------------------------------------------h7*@
+                            else if(Model.h1!=0 && Model.h2 !=0 && Model.h3!=0 && Model.h4 !=0 && Model.h5!=0 && Model.h6 !=0 && Model.h7==0 && Model.h8 ==0 && Model.h9==0 && Model.h10 ==0 && Model.h11==0 && Model.h12 ==0 && Model.h13==0 && Model.h14 ==0 && Model.h15==0 && Model.h16 ==0 && Model.h17==0 && Model.h18 ==0 ){
+        <div class="editor-label">
+            @Html.HiddenFor(model => model.h1)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h1)
+            @Html.ValidationMessageFor(model => model.h1)
+        </div>							
+							
+        <div class="editor-label">
+            @Html.HiddenFor(model => model.h2)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h2)
+            @Html.ValidationMessageFor(model => model.h2)
+        </div>
+		
+		 <div class="editor-label">
+            @Html.HiddenFor(model => model.h3)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h3)
+            @Html.ValidationMessageFor(model => model.h3)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h4)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h4)
+            @Html.ValidationMessageFor(model => model.h4)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h5)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h5)
+            @Html.ValidationMessageFor(model => model.h5)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h6)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h6)
+            @Html.ValidationMessageFor(model => model.h6)
+        </div>
+		
+				 <div class="editor-label">
+            <strong>@ViewBag.Hole7</strong>
+        </div>
+        <div class="editor-field">      
+            @Html.EditorFor(model => model.h7)
+            @Html.ValidationMessageFor(model => model.h7)
+        </div>
+		
+		<div class="editor-label">
+            @Html.HiddenFor(model => model.h8)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h8)
+            @Html.ValidationMessageFor(model => model.h8)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h9)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h9)
+            @Html.ValidationMessageFor(model => model.h9)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h10)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h10)
+            @Html.ValidationMessageFor(model => model.h10)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h11)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h11)
+            @Html.ValidationMessageFor(model => model.h11)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h12)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h12)
+            @Html.ValidationMessageFor(model => model.h12)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h13)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h13)
+            @Html.ValidationMessageFor(model => model.h13)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h14)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h14)
+            @Html.ValidationMessageFor(model => model.h14)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h15)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h15)
+            @Html.ValidationMessageFor(model => model.h15)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h16)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h16)
+            @Html.ValidationMessageFor(model => model.h16)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h17)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h17)
+            @Html.ValidationMessageFor(model => model.h17)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h18)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h18)
+            @Html.ValidationMessageFor(model => model.h18)
+        </div>
+}
+@*----------------------------------------------------------------------------------------------------------------------h8*@
+                            else if(Model.h1!=0 && Model.h2 !=0 && Model.h3!=0 && Model.h4 !=0 && Model.h5!=0 && Model.h6 !=0 && Model.h7!=0 && Model.h8 ==0 && Model.h9==0 && Model.h10 ==0 && Model.h11==0 && Model.h12 ==0 && Model.h13==0 && Model.h14 ==0 && Model.h15==0 && Model.h16 ==0 && Model.h17==0 && Model.h18 ==0 ){
+        <div class="editor-label">
+            @Html.HiddenFor(model => model.h1)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h1)
+            @Html.ValidationMessageFor(model => model.h1)
+        </div>							
+							
+        <div class="editor-label">
+            @Html.HiddenFor(model => model.h2)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h2)
+            @Html.ValidationMessageFor(model => model.h2)
+        </div>
+		
+		 <div class="editor-label">
+            @Html.HiddenFor(model => model.h3)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h3)
+            @Html.ValidationMessageFor(model => model.h3)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h4)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h4)
+            @Html.ValidationMessageFor(model => model.h4)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h5)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h5)
+            @Html.ValidationMessageFor(model => model.h5)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h6)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h6)
+            @Html.ValidationMessageFor(model => model.h6)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h7)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h7)
+            @Html.ValidationMessageFor(model => model.h7)
+        </div>
+		
+				 <div class="editor-label">
+            <strong>@ViewBag.Hole8</strong>
+        </div>
+        <div class="editor-field">      
+            @Html.EditorFor(model => model.h8)
+            @Html.ValidationMessageFor(model => model.h8)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h9)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h9)
+            @Html.ValidationMessageFor(model => model.h9)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h10)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h10)
+            @Html.ValidationMessageFor(model => model.h10)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h11)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h11)
+            @Html.ValidationMessageFor(model => model.h11)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h12)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h12)
+            @Html.ValidationMessageFor(model => model.h12)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h13)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h13)
+            @Html.ValidationMessageFor(model => model.h13)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h14)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h14)
+            @Html.ValidationMessageFor(model => model.h14)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h15)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h15)
+            @Html.ValidationMessageFor(model => model.h15)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h16)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h16)
+            @Html.ValidationMessageFor(model => model.h16)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h17)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h17)
+            @Html.ValidationMessageFor(model => model.h17)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h18)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h18)
+            @Html.ValidationMessageFor(model => model.h18)
+        </div>
+}
+@*----------------------------------------------------------------------------------------------------------------------h9*@
+                            else if(Model.h1!=0 && Model.h2 !=0 && Model.h3!=0 && Model.h4 !=0 && Model.h5!=0 && Model.h6 !=0 && Model.h7!=0 && Model.h8 !=0 && Model.h9==0 && Model.h10 ==0 && Model.h11==0 && Model.h12 ==0 && Model.h13==0 && Model.h14 ==0 && Model.h15==0 && Model.h16 ==0 && Model.h17==0 && Model.h18 ==0 ){
+        <div class="editor-label">
+            @Html.HiddenFor(model => model.h1)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h1)
+            @Html.ValidationMessageFor(model => model.h1)
+        </div>							
+							
+        <div class="editor-label">
+            @Html.HiddenFor(model => model.h2)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h2)
+            @Html.ValidationMessageFor(model => model.h2)
+        </div>
+		
+		 <div class="editor-label">
+            @Html.HiddenFor(model => model.h3)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h3)
+            @Html.ValidationMessageFor(model => model.h3)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h4)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h4)
+            @Html.ValidationMessageFor(model => model.h4)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h5)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h5)
+            @Html.ValidationMessageFor(model => model.h5)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h6)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h6)
+            @Html.ValidationMessageFor(model => model.h6)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h7)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h7)
+            @Html.ValidationMessageFor(model => model.h7)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h8)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h8)
+            @Html.ValidationMessageFor(model => model.h8)
+        </div>
+		
+				 <div class="editor-label">
+            <strong>@ViewBag.Hole9</strong>
+        </div>
+        <div class="editor-field">      
+            @Html.EditorFor(model => model.h9)
+            @Html.ValidationMessageFor(model => model.h9)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h10)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h10)
+            @Html.ValidationMessageFor(model => model.h10)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h11)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h11)
+            @Html.ValidationMessageFor(model => model.h11)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h12)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h12)
+            @Html.ValidationMessageFor(model => model.h12)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h13)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h13)
+            @Html.ValidationMessageFor(model => model.h13)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h14)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h14)
+            @Html.ValidationMessageFor(model => model.h14)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h15)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h15)
+            @Html.ValidationMessageFor(model => model.h15)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h16)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h16)
+            @Html.ValidationMessageFor(model => model.h16)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h17)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h17)
+            @Html.ValidationMessageFor(model => model.h17)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h18)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h18)
+            @Html.ValidationMessageFor(model => model.h18)
+        </div>
+}
+@*----------------------------------------------------------------------------------------------------------------------h10*@
+                            else if(Model.h1!=0 && Model.h2 !=0 && Model.h3!=0 && Model.h4 !=0 && Model.h5!=0 && Model.h6 !=0 && Model.h7!=0 && Model.h8 !=0 && Model.h9!=0 && Model.h10 ==0 && Model.h11==0 && Model.h12 ==0 && Model.h13==0 && Model.h14 ==0 && Model.h15==0 && Model.h16 ==0 && Model.h17==0 && Model.h18 ==0 ){
+        <div class="editor-label">
+            @Html.HiddenFor(model => model.h1)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h1)
+            @Html.ValidationMessageFor(model => model.h1)
+        </div>							
+							
+        <div class="editor-label">
+            @Html.HiddenFor(model => model.h2)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h2)
+            @Html.ValidationMessageFor(model => model.h2)
+        </div>
+		
+		 <div class="editor-label">
+            @Html.HiddenFor(model => model.h3)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h3)
+            @Html.ValidationMessageFor(model => model.h3)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h4)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h4)
+            @Html.ValidationMessageFor(model => model.h4)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h5)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h5)
+            @Html.ValidationMessageFor(model => model.h5)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h6)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h6)
+            @Html.ValidationMessageFor(model => model.h6)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h7)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h7)
+            @Html.ValidationMessageFor(model => model.h7)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h8)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h8)
+            @Html.ValidationMessageFor(model => model.h8)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h9)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h9)
+            @Html.ValidationMessageFor(model => model.h9)
+        </div>
+		
+				 <div class="editor-label">
+            <strong>@ViewBag.Hole10</strong>
+        </div>
+        <div class="editor-field">      
+            @Html.EditorFor(model => model.h10)
+            @Html.ValidationMessageFor(model => model.h10)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h11)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h11)
+            @Html.ValidationMessageFor(model => model.h11)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h12)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h12)
+            @Html.ValidationMessageFor(model => model.h12)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h13)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h13)
+            @Html.ValidationMessageFor(model => model.h13)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h14)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h14)
+            @Html.ValidationMessageFor(model => model.h14)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h15)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h15)
+            @Html.ValidationMessageFor(model => model.h15)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h16)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h16)
+            @Html.ValidationMessageFor(model => model.h16)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h17)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h17)
+            @Html.ValidationMessageFor(model => model.h17)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h18)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h18)
+            @Html.ValidationMessageFor(model => model.h18)
+        </div>
+}
+@*----------------------------------------------------------------------------------------------------------------------h11*@
+                            else if(Model.h1!=0 && Model.h2 !=0 && Model.h3!=0 && Model.h4 !=0 && Model.h5!=0 && Model.h6 !=0 && Model.h7!=0 && Model.h8 !=0 && Model.h9!=0 && Model.h10 !=0 && Model.h11==0 && Model.h12 ==0 && Model.h13==0 && Model.h14 ==0 && Model.h15==0 && Model.h16 ==0 && Model.h17==0 && Model.h18 ==0 ){
+        <div class="editor-label">
+            @Html.HiddenFor(model => model.h1)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h1)
+            @Html.ValidationMessageFor(model => model.h1)
+        </div>							
+							
+        <div class="editor-label">
+            @Html.HiddenFor(model => model.h2)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h2)
+            @Html.ValidationMessageFor(model => model.h2)
+        </div>
+		
+		 <div class="editor-label">
+            @Html.HiddenFor(model => model.h3)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h3)
+            @Html.ValidationMessageFor(model => model.h3)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h4)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h4)
+            @Html.ValidationMessageFor(model => model.h4)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h5)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h5)
+            @Html.ValidationMessageFor(model => model.h5)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h6)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h6)
+            @Html.ValidationMessageFor(model => model.h6)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h7)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h7)
+            @Html.ValidationMessageFor(model => model.h7)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h8)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h8)
+            @Html.ValidationMessageFor(model => model.h8)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h9)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h9)
+            @Html.ValidationMessageFor(model => model.h9)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h10)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h10)
+            @Html.ValidationMessageFor(model => model.h10)
+        </div>
+		
+				 <div class="editor-label">
+            <strong>@ViewBag.Hole11</strong>
+        </div>
+        <div class="editor-field">      
+            @Html.EditorFor(model => model.h11)
+            @Html.ValidationMessageFor(model => model.h11)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h12)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h12)
+            @Html.ValidationMessageFor(model => model.h12)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h13)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h13)
+            @Html.ValidationMessageFor(model => model.h13)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h14)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h14)
+            @Html.ValidationMessageFor(model => model.h14)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h15)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h15)
+            @Html.ValidationMessageFor(model => model.h15)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h16)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h16)
+            @Html.ValidationMessageFor(model => model.h16)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h17)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h17)
+            @Html.ValidationMessageFor(model => model.h17)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h18)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h18)
+            @Html.ValidationMessageFor(model => model.h18)
+        </div>
+}
+@*----------------------------------------------------------------------------------------------------------------------h12*@
+                            else if(Model.h1!=0 && Model.h2 !=0 && Model.h3!=0 && Model.h4 !=0 && Model.h5!=0 && Model.h6 !=0 && Model.h7!=0 && Model.h8 !=0 && Model.h9!=0 && Model.h10 !=0 && Model.h11!=0 && Model.h12 ==0 && Model.h13==0 && Model.h14 ==0 && Model.h15==0 && Model.h16 ==0 && Model.h17==0 && Model.h18 ==0 ){
+        <div class="editor-label">
+            @Html.HiddenFor(model => model.h1)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h1)
+            @Html.ValidationMessageFor(model => model.h1)
+        </div>							
+							
+        <div class="editor-label">
+            @Html.HiddenFor(model => model.h2)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h2)
+            @Html.ValidationMessageFor(model => model.h2)
+        </div>
+		
+		 <div class="editor-label">
+            @Html.HiddenFor(model => model.h3)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h3)
+            @Html.ValidationMessageFor(model => model.h3)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h4)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h4)
+            @Html.ValidationMessageFor(model => model.h4)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h5)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h5)
+            @Html.ValidationMessageFor(model => model.h5)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h6)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h6)
+            @Html.ValidationMessageFor(model => model.h6)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h7)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h7)
+            @Html.ValidationMessageFor(model => model.h7)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h8)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h8)
+            @Html.ValidationMessageFor(model => model.h8)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h9)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h9)
+            @Html.ValidationMessageFor(model => model.h9)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h10)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h10)
+            @Html.ValidationMessageFor(model => model.h10)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h11)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h11)
+            @Html.ValidationMessageFor(model => model.h11)
+        </div>
+		
+				 <div class="editor-label">
+            <strong>@ViewBag.Hole12</strong>
+        </div>
+        <div class="editor-field">      
+            @Html.EditorFor(model => model.h12)
+            @Html.ValidationMessageFor(model => model.h12)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h13)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h13)
+            @Html.ValidationMessageFor(model => model.h13)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h14)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h14)
+            @Html.ValidationMessageFor(model => model.h14)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h15)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h15)
+            @Html.ValidationMessageFor(model => model.h15)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h16)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h16)
+            @Html.ValidationMessageFor(model => model.h16)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h17)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h17)
+            @Html.ValidationMessageFor(model => model.h17)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h18)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h18)
+            @Html.ValidationMessageFor(model => model.h18)
+        </div>
+}
+@*----------------------------------------------------------------------------------------------------------------------h13*@
+                            else if(Model.h1!=0 && Model.h2 !=0 && Model.h3!=0 && Model.h4 !=0 && Model.h5!=0 && Model.h6 !=0 && Model.h7!=0 && Model.h8 !=0 && Model.h9!=0 && Model.h10 !=0 && Model.h11!=0 && Model.h12 !=0 && Model.h13==0 && Model.h14 ==0 && Model.h15==0 && Model.h16 ==0 && Model.h17==0 && Model.h18 ==0 ){
+        <div class="editor-label">
+            @Html.HiddenFor(model => model.h1)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h1)
+            @Html.ValidationMessageFor(model => model.h1)
+        </div>							
+							
+        <div class="editor-label">
+            @Html.HiddenFor(model => model.h2)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h2)
+            @Html.ValidationMessageFor(model => model.h2)
+        </div>
+		
+		 <div class="editor-label">
+            @Html.HiddenFor(model => model.h3)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h3)
+            @Html.ValidationMessageFor(model => model.h3)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h4)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h4)
+            @Html.ValidationMessageFor(model => model.h4)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h5)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h5)
+            @Html.ValidationMessageFor(model => model.h5)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h6)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h6)
+            @Html.ValidationMessageFor(model => model.h6)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h7)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h7)
+            @Html.ValidationMessageFor(model => model.h7)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h8)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h8)
+            @Html.ValidationMessageFor(model => model.h8)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h9)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h9)
+            @Html.ValidationMessageFor(model => model.h9)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h10)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h10)
+            @Html.ValidationMessageFor(model => model.h10)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h11)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h11)
+            @Html.ValidationMessageFor(model => model.h11)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h12)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h12)
+            @Html.ValidationMessageFor(model => model.h12)
+        </div>
+		
+				 <div class="editor-label">
+            <strong>@ViewBag.Hole13</strong>
+        </div>
+        <div class="editor-field">      
+            @Html.EditorFor(model => model.h13)
+            @Html.ValidationMessageFor(model => model.h13)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h14)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h14)
+            @Html.ValidationMessageFor(model => model.h14)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h15)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h15)
+            @Html.ValidationMessageFor(model => model.h15)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h16)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h16)
+            @Html.ValidationMessageFor(model => model.h16)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h17)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h17)
+            @Html.ValidationMessageFor(model => model.h17)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h18)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h18)
+            @Html.ValidationMessageFor(model => model.h18)
+        </div>
+}
+@*----------------------------------------------------------------------------------------------------------------------h14*@
+                            else if(Model.h1!=0 && Model.h2 !=0 && Model.h3!=0 && Model.h4 !=0 && Model.h5!=0 && Model.h6 !=0 && Model.h7!=0 && Model.h8 !=0 && Model.h9!=0 && Model.h10 !=0 && Model.h11!=0 && Model.h12 !=0 && Model.h13!=0 && Model.h14 ==0 && Model.h15==0 && Model.h16 ==0 && Model.h17==0 && Model.h18 ==0 ){
+        <div class="editor-label">
+            @Html.HiddenFor(model => model.h1)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h1)
+            @Html.ValidationMessageFor(model => model.h1)
+        </div>							
+							
+        <div class="editor-label">
+            @Html.HiddenFor(model => model.h2)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h2)
+            @Html.ValidationMessageFor(model => model.h2)
+        </div>
+		
+		 <div class="editor-label">
+            @Html.HiddenFor(model => model.h3)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h3)
+            @Html.ValidationMessageFor(model => model.h3)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h4)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h4)
+            @Html.ValidationMessageFor(model => model.h4)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h5)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h5)
+            @Html.ValidationMessageFor(model => model.h5)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h6)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h6)
+            @Html.ValidationMessageFor(model => model.h6)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h7)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h7)
+            @Html.ValidationMessageFor(model => model.h7)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h8)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h8)
+            @Html.ValidationMessageFor(model => model.h8)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h9)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h9)
+            @Html.ValidationMessageFor(model => model.h9)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h10)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h10)
+            @Html.ValidationMessageFor(model => model.h10)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h11)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h11)
+            @Html.ValidationMessageFor(model => model.h11)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h12)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h12)
+            @Html.ValidationMessageFor(model => model.h12)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h13)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h13)
+            @Html.ValidationMessageFor(model => model.h13)
+        </div>
+		
+				 <div class="editor-label">
+            <strong>@ViewBag.Hole14</strong>
+        </div>
+        <div class="editor-field">      
+            @Html.EditorFor(model => model.h14)
+            @Html.ValidationMessageFor(model => model.h14)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h15)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h15)
+            @Html.ValidationMessageFor(model => model.h15)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h16)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h16)
+            @Html.ValidationMessageFor(model => model.h16)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h17)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h17)
+            @Html.ValidationMessageFor(model => model.h17)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h18)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h18)
+            @Html.ValidationMessageFor(model => model.h18)
+        </div>
+}
+@*----------------------------------------------------------------------------------------------------------------------h15*@
+                            else if(Model.h1!=0 && Model.h2 !=0 && Model.h3!=0 && Model.h4 !=0 && Model.h5!=0 && Model.h6 !=0 && Model.h7!=0 && Model.h8 !=0 && Model.h9!=0 && Model.h10 !=0 && Model.h11!=0 && Model.h12 !=0 && Model.h13!=0 && Model.h14 !=0 && Model.h15==0 && Model.h16 ==0 && Model.h17==0 && Model.h18 ==0 ){
+        <div class="editor-label">
+            @Html.HiddenFor(model => model.h1)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h1)
+            @Html.ValidationMessageFor(model => model.h1)
+        </div>							
+							
+        <div class="editor-label">
+            @Html.HiddenFor(model => model.h2)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h2)
+            @Html.ValidationMessageFor(model => model.h2)
+        </div>
+		
+		 <div class="editor-label">
+            @Html.HiddenFor(model => model.h3)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h3)
+            @Html.ValidationMessageFor(model => model.h3)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h4)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h4)
+            @Html.ValidationMessageFor(model => model.h4)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h5)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h5)
+            @Html.ValidationMessageFor(model => model.h5)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h6)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h6)
+            @Html.ValidationMessageFor(model => model.h6)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h7)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h7)
+            @Html.ValidationMessageFor(model => model.h7)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h8)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h8)
+            @Html.ValidationMessageFor(model => model.h8)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h9)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h9)
+            @Html.ValidationMessageFor(model => model.h9)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h10)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h10)
+            @Html.ValidationMessageFor(model => model.h10)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h11)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h11)
+            @Html.ValidationMessageFor(model => model.h11)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h12)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h12)
+            @Html.ValidationMessageFor(model => model.h12)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h13)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h13)
+            @Html.ValidationMessageFor(model => model.h13)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h14)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h14)
+            @Html.ValidationMessageFor(model => model.h14)
+        </div>
+		
+				 <div class="editor-label">
+            <strong>@ViewBag.Hole15</strong>
+        </div>
+        <div class="editor-field">      
+            @Html.EditorFor(model => model.h15)
+            @Html.ValidationMessageFor(model => model.h15)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h16)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h16)
+            @Html.ValidationMessageFor(model => model.h16)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h17)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h17)
+            @Html.ValidationMessageFor(model => model.h17)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h18)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h18)
+            @Html.ValidationMessageFor(model => model.h18)
+        </div>
+}
+@*----------------------------------------------------------------------------------------------------------------------h16*@
+                            else if(Model.h1!=0 && Model.h2 !=0 && Model.h3!=0 && Model.h4 !=0 && Model.h5!=0 && Model.h6 !=0 && Model.h7!=0 && Model.h8 !=0 && Model.h9!=0 && Model.h10 !=0 && Model.h11!=0 && Model.h12 !=0 && Model.h13!=0 && Model.h14 !=0 && Model.h15!=0 && Model.h16 ==0 && Model.h17==0 && Model.h18 ==0 ){
+        <div class="editor-label">
+            @Html.HiddenFor(model => model.h1)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h1)
+            @Html.ValidationMessageFor(model => model.h1)
+        </div>							
+							
+        <div class="editor-label">
+            @Html.HiddenFor(model => model.h2)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h2)
+            @Html.ValidationMessageFor(model => model.h2)
+        </div>
+		
+		 <div class="editor-label">
+            @Html.HiddenFor(model => model.h3)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h3)
+            @Html.ValidationMessageFor(model => model.h3)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h4)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h4)
+            @Html.ValidationMessageFor(model => model.h4)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h5)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h5)
+            @Html.ValidationMessageFor(model => model.h5)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h6)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h6)
+            @Html.ValidationMessageFor(model => model.h6)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h7)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h7)
+            @Html.ValidationMessageFor(model => model.h7)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h8)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h8)
+            @Html.ValidationMessageFor(model => model.h8)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h9)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h9)
+            @Html.ValidationMessageFor(model => model.h9)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h10)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h10)
+            @Html.ValidationMessageFor(model => model.h10)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h11)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h11)
+            @Html.ValidationMessageFor(model => model.h11)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h12)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h12)
+            @Html.ValidationMessageFor(model => model.h12)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h13)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h13)
+            @Html.ValidationMessageFor(model => model.h13)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h14)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h14)
+            @Html.ValidationMessageFor(model => model.h14)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h15)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h15)
+            @Html.ValidationMessageFor(model => model.h15)
+        </div>
+		
+				 <div class="editor-label">
+            <strong>@ViewBag.Hole16</strong>
+        </div>
+        <div class="editor-field">      
+            @Html.EditorFor(model => model.h16)
+            @Html.ValidationMessageFor(model => model.h16)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h17)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h17)
+            @Html.ValidationMessageFor(model => model.h17)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h18)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h18)
+            @Html.ValidationMessageFor(model => model.h18)
+        </div>
+}
+@*----------------------------------------------------------------------------------------------------------------------h17*@
+                            else if(Model.h1!=0 && Model.h2 !=0 && Model.h3!=0 && Model.h4 !=0 && Model.h5!=0 && Model.h6 !=0 && Model.h7!=0 && Model.h8 !=0 && Model.h9!=0 && Model.h10 !=0 && Model.h11!=0 && Model.h12 !=0 && Model.h13!=0 && Model.h14 !=0 && Model.h15!=0 && Model.h16 !=0 && Model.h17==0 && Model.h18 ==0 ){
+        <div class="editor-label">
+            @Html.HiddenFor(model => model.h1)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h1)
+            @Html.ValidationMessageFor(model => model.h1)
+        </div>							
+							
+        <div class="editor-label">
+            @Html.HiddenFor(model => model.h2)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h2)
+            @Html.ValidationMessageFor(model => model.h2)
+        </div>
+		
+		 <div class="editor-label">
+            @Html.HiddenFor(model => model.h3)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h3)
+            @Html.ValidationMessageFor(model => model.h3)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h4)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h4)
+            @Html.ValidationMessageFor(model => model.h4)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h5)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h5)
+            @Html.ValidationMessageFor(model => model.h5)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h6)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h6)
+            @Html.ValidationMessageFor(model => model.h6)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h7)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h7)
+            @Html.ValidationMessageFor(model => model.h7)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h8)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h8)
+            @Html.ValidationMessageFor(model => model.h8)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h9)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h9)
+            @Html.ValidationMessageFor(model => model.h9)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h10)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h10)
+            @Html.ValidationMessageFor(model => model.h10)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h11)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h11)
+            @Html.ValidationMessageFor(model => model.h11)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h12)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h12)
+            @Html.ValidationMessageFor(model => model.h12)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h13)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h13)
+            @Html.ValidationMessageFor(model => model.h13)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h14)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h14)
+            @Html.ValidationMessageFor(model => model.h14)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h15)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h15)
+            @Html.ValidationMessageFor(model => model.h15)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h16)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h16)
+            @Html.ValidationMessageFor(model => model.h16)
+        </div>
+		
+				 <div class="editor-label">
+            <strong>@ViewBag.Hole17</strong>
+        </div>
+        <div class="editor-field">      
+            @Html.EditorFor(model => model.h17)
+            @Html.ValidationMessageFor(model => model.h17)
+        </div>
+		
+						 <div class="editor-label">
+            @Html.HiddenFor(model => model.h18)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h18)
+            @Html.ValidationMessageFor(model => model.h18)
+        </div>
+}
+@*----------------------------------------------------------------------------------------------------------------------h18*@
+                            else if(Model.h1!=0 && Model.h2 !=0 && Model.h3!=0 && Model.h4 !=0 && Model.h5!=0 && Model.h6 !=0 && Model.h7!=0 && Model.h8 !=0 && Model.h9!=0 && Model.h10 !=0 && Model.h11!=0 && Model.h12 !=0 && Model.h13!=0 && Model.h14 !=0 && Model.h15!=0 && Model.h16 !=0 && Model.h17!=0 && Model.h18 ==0 ){
+        <div class="editor-label">
+            @Html.HiddenFor(model => model.h1)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h1)
+            @Html.ValidationMessageFor(model => model.h1)
+        </div>							
+							
+        <div class="editor-label">
+            @Html.HiddenFor(model => model.h2)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h2)
+            @Html.ValidationMessageFor(model => model.h2)
+        </div>
+		
+		 <div class="editor-label">
+            @Html.HiddenFor(model => model.h3)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h3)
+            @Html.ValidationMessageFor(model => model.h3)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h4)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h4)
+            @Html.ValidationMessageFor(model => model.h4)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h5)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h5)
+            @Html.ValidationMessageFor(model => model.h5)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h6)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h6)
+            @Html.ValidationMessageFor(model => model.h6)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h7)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h7)
+            @Html.ValidationMessageFor(model => model.h7)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h8)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h8)
+            @Html.ValidationMessageFor(model => model.h8)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h9)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h9)
+            @Html.ValidationMessageFor(model => model.h9)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h10)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h10)
+            @Html.ValidationMessageFor(model => model.h10)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h11)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h11)
+            @Html.ValidationMessageFor(model => model.h11)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h12)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h12)
+            @Html.ValidationMessageFor(model => model.h12)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h13)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h13)
+            @Html.ValidationMessageFor(model => model.h13)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h14)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h14)
+            @Html.ValidationMessageFor(model => model.h14)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h15)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h15)
+            @Html.ValidationMessageFor(model => model.h15)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h16)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h16)
+            @Html.ValidationMessageFor(model => model.h16)
+        </div>
+		
+				 <div class="editor-label">
+            @Html.HiddenFor(model => model.h17)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h17)
+            @Html.ValidationMessageFor(model => model.h17)
+        </div>
+		
+				 <div class="editor-label">
+            <strong>@ViewBag.Hole18</strong>
+        </div>
+        <div class="editor-field">      
+            @Html.EditorFor(model => model.h18)
+            @Html.ValidationMessageFor(model => model.h18)
+        </div>
+}
+@*----------------------------------------------------------------------------------------------------------------------END*@
+
+       
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

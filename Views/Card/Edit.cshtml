@@ -1,0 +1,195 @@
+﻿@model DiscGolf.Models.Card
+
+
+@{
+    ViewBag.Title = "Full Edit";
+}
+
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Card</legend>
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="editor-label">
+            @Html.HiddenFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.HiddenFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.h1)
+        </div>
+        <div class="editor-field">      
+            @Html.EditorFor(model => model.h1)
+            @Html.ValidationMessageFor(model => model.h1)
+        </div>
+
+                    <div class="editor-label">
+            @Html.HiddenFor(model => model.h1)
+        </div>
+        <div class="editor-field">      
+            @Html.HiddenFor(model => model.h1)
+            @Html.ValidationMessageFor(model => model.h1)
+        </div>
+
+        
+
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.h2)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.h2)
+            @Html.ValidationMessageFor(model => model.h2)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.h3)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.h3)
+            @Html.ValidationMessageFor(model => model.h3)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.h4)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.h4)
+            @Html.ValidationMessageFor(model => model.h4)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.h5)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.h5)
+            @Html.ValidationMessageFor(model => model.h5)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.h6)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.h6)
+            @Html.ValidationMessageFor(model => model.h6)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.h7)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.h7)
+            @Html.ValidationMessageFor(model => model.h7)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.h8)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.h8)
+            @Html.ValidationMessageFor(model => model.h8)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.h9)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.h9)
+            @Html.ValidationMessageFor(model => model.h9)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.h10)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.h10)
+            @Html.ValidationMessageFor(model => model.h10)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.h11)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.h11)
+            @Html.ValidationMessageFor(model => model.h11)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.h12)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.h12)
+            @Html.ValidationMessageFor(model => model.h12)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.h13)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.h13)
+            @Html.ValidationMessageFor(model => model.h13)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.h14)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.h14)
+            @Html.ValidationMessageFor(model => model.h14)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.h15)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.h15)
+            @Html.ValidationMessageFor(model => model.h15)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.h16)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.h16)
+            @Html.ValidationMessageFor(model => model.h16)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.h17)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.h17)
+            @Html.ValidationMessageFor(model => model.h17)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.h18)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.h18)
+            @Html.ValidationMessageFor(model => model.h18)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

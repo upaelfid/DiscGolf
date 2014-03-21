@@ -6,22 +6,30 @@
 
 @foreach (var item in Model)
 {
-    <div style="display: inline-block;">
-        <h4 style="margin-bottom: 1em;">@item.Name</h4>
-        <div style="font-size: 4em; font-weight: bold;">@(@item.h1 + @item.h2 + @item.h3 + @item.h4 + @item.h5 + @item.h6 + @item.h7 + @item.h8 +
+   
+    <h4>@item.Name</h4>
+    <div>
+        <div style="font-size: 4em; font-weight: bold; float: left; margin-right:.2em;">@(@item.h1 + @item.h2 + @item.h3 + @item.h4 + @item.h5 + @item.h6 + @item.h7 + @item.h8 +
             @item.h9 + @item.h10 + +@item.h11 + @item.h12 + @item.h13 + @item.h14 + @item.h15 + @item.h16 + @item.h17 + @item.h18)
         </div>
-    </div>
-    
-    <div style="display: inline-block; padding-left: 5em;">
-        <div>@item.h1, @item.h2, @item.h3, @item.h4, @item.h5, @item.h6, @item.h7, @item.h8,
-            @item.h9</div>
-        <div>@item.h10,  @item.h11, @item.h12, @item.h13, @item.h14, @item.h15, @item.h16, @item.h17,
-            @item.h18</div>
+
+        <div style="padding-top:1.8em; ">
+            <div>@item.h1, @item.h2, @item.h3, @item.h4, @item.h5, @item.h6, @item.h7, @item.h8,
+                @item.h9
+            </div>
+            <div>@item.h10,  @item.h11, @item.h12, @item.h13, @item.h14, @item.h15, @item.h16, @item.h17,
+                @item.h18
+            </div>
+        </div>
     </div>
     if (User.Identity.Name == item.Name)
-    { <div style="font-size: 2em; color:blue">@Html.ActionLink("UPDATE", "EditField", "Card", new{id=item.Id}, null)
+    { <div style="font-size: 2em; color: blue; clear: both;margin-left: 2.5em;">@Html.ActionLink("UPDATE", "EditField", "Card", new { id = item.Id }, null)
     </div>}
+    else
+    {
+    <div style="font-size: 2em; color: blue; clear: both; margin-left: 2.5em;"></div>
+    }
+    
     <hr />
 }
 

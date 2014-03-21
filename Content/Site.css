@@ -619,6 +619,13 @@ tr.pager td {
     header .float-right {
         float: none;
     }
+#scorecard{
+    display: inline;
+
+	margin-top: .6em;
+    margin-bottom: .6em;
+    margin-right: 4em;
+}
 
     /* logo */
     header .site-title {

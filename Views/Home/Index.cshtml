@@ -7,30 +7,51 @@
 @foreach (var item in Model)
 {
    
-    <h4>@item.Name</h4>
+    <h4 style="border: 1px solid black; width: 15.1em; text-align: center;">@item.Name
+    </h4>
     <div>
-        <div style="font-size: 4em; font-weight: bold; float: left; margin-right:.2em;">@(@item.h1 + @item.h2 + @item.h3 + @item.h4 + @item.h5 + @item.h6 + @item.h7 + @item.h8 +
+        <div style="font-size: 4em; font-weight: bold; float: left; margin-right: .2em; border-right: 1px solid black;
+            border-left: 1px solid black; width: 66px;">@(@item.h1 + @item.h2 + @item.h3 + @item.h4 + @item.h5 + @item.h6 + @item.h7 + @item.h8 +
             @item.h9 + @item.h10 + +@item.h11 + @item.h12 + @item.h13 + @item.h14 + @item.h15 + @item.h16 + @item.h17 + @item.h18)
         </div>
 
-        <div style="padding-top:1.8em; ">
-            <div>@item.h1, @item.h2, @item.h3, @item.h4, @item.h5, @item.h6, @item.h7, @item.h8,
-                @item.h9
-            </div>
-            <div>@item.h10,  @item.h11, @item.h12, @item.h13, @item.h14, @item.h15, @item.h16, @item.h17,
-                @item.h18
-            </div>
+        <div style="padding-top: 1.1em;">
+            <table style="width: 11em;">
+                <tr>
+                    <td>@item.h1</td>
+                    <td>@item.h2</td>
+                    <td>@item.h3</td>
+                    <td>@item.h4</td>
+                    <td>@item.h5</td>
+                    <td>@item.h6</td>
+                    <td>@item.h7</td>
+                    <td>@item.h8</td>
+                    <td>@item.h9</td>
+                </tr>
+                <tr>
+                    <td>@item.h10</td>
+                    <td>@item.h11</td>
+                    <td>@item.h12</td>
+                    <td>@item.h13</td>
+                    <td>@item.h14</td>
+                    <td>@item.h15</td>
+                    <td>@item.h16</td>
+                    <td>@item.h17</td>
+                    <td>@item.h18</td>
+                </tr>
+            </table>
         </div>
     </div>
     if (User.Identity.Name == item.Name)
-    { <div style="font-size: 2em; color: blue; clear: both;margin-left: 2.5em;">@Html.ActionLink("UPDATE", "EditField", "Card", new { id = item.Id }, null)
+    { <div style="font-size: 2em; color: blue; clear: both; border: 1px solid black;
+        text-align: center; width: 8.3em;" class="btn">@Html.ActionLink("UPDATE", "EditField", "Card", new { id = item.Id }, null)
     </div>}
     else
     {
-    <div style="font-size: 2em; color: blue; clear: both; margin-left: 2.5em;"></div>
+    <div style="font-size: 2em; color: blue; clear: both; border: 1px solid black; text-align: center;
+        width: 8.3em;"></div>
     }
-    
-    <hr />
+
 }
 
 

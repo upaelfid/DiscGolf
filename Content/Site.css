@@ -100,7 +100,7 @@ h5, h6 {
 }
 
 #body {
-    background-color: #efeeef;
+    background-color: #cdded0;
     clear: both;
     padding-bottom: 35px;
 }
@@ -140,7 +140,7 @@ footer {
 
 .site-title a, .site-title a:hover, .site-title a:active {
     background: none;
-    color: #c8c8c8;
+    color: black;
     outline: none;
     text-decoration: none;
     margin-top: 10px;
@@ -453,7 +453,12 @@ input, textarea {
     font-size: 1.2em;
     margin: 5px 0 6px 0;
     padding: 5px;
-    width: 300px;
+    width: 50px;
+}
+
+#create
+{
+    float: left;
 }
 
 textarea {

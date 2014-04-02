@@ -6,12 +6,10 @@
     ViewBag.Game2 = "10 - 18";
 }
 
-
-<h2>Your Cards</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
+<p class="btn" style="height:2em;">
+    @Html.ActionLink("Create New Card", "Create")
 </p>
+<h2 style="margin-bottom:1em; background-color:lightgrey;">Your Cards</h2>
 
 <table>
 @foreach (var item in Model) {
@@ -115,10 +113,10 @@
             @Html.DisplayFor(modelItem => item.h18)
         </td>
         <tr>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id })|
+        <td colspan="10">
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }, new{@class="btn", @style="float:left; width:50%;"})
 
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })  
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id }, new{@class="btn", @style="float:left; width:45%;"})  
         </td>
         </tr>
     </tr>}

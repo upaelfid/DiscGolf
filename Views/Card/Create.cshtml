@@ -4,7 +4,7 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
+@*<h2>Create</h2>*@
 
 @using (Html.BeginForm()) {
     @Html.ValidationSummary(true)
@@ -169,9 +169,9 @@
     </fieldset>
 }
 
-<div class="button">
+@*<div class="button">
     @Html.ActionLink("View Cards", "Index")
-</div>
+</div>*@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

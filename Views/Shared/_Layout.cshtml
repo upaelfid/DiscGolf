@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+        <title>Golf</title>
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <meta name="viewport" content="width=device-width" />
@@ -24,10 +24,10 @@
                     </section>
                     <nav>
                         <ul id="menu">
-                            <li>@Html.ActionLink("Homes", "Index", "Home")</li>
+                            <li class="btn" style="clear:right; float:left; width:100%; height:2em;">@Html.ActionLink("Leader Board", "Index", "Home")</li>
                            @* <li>@Html.ActionLink("About", "About", "Home")</li>
                             <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
-                            <li>@Html.ActionLink("Score Cards", "Index", "Card")</li>
+                            <li class="btn" style="clear:left; float:left; width:100%; height:2em; margin-bottom:1px;">@Html.ActionLink("Score Cards", "Index", "Card")</li>
                         </ul>
                     </nav>
                 </div>

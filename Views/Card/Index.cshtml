@@ -4,21 +4,22 @@
     ViewBag.Title = "Index";
     ViewBag.Game1 = "1 - 9";
     ViewBag.Game2 = "10 - 18";
+    ViewBag.UserName = User.Identity.Name;
 }
 
-<p class="btn" style="height:2em;">
+<p class="btn" style="height:2em; margin-top:-3.9em;">
     @Html.ActionLink("Create New Card", "Create")
 </p>
-<h2 style="margin-bottom:1em; background-color:lightgrey;">Your Cards</h2>
+@*<h2 style="margin-bottom:1em; background-color:lightgrey;">Your Cards</h2>*@
 
 <table>
 @foreach (var item in Model) {
      if(User.Identity.Name == item.Name){
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
+        <th colspan="10">
+            @ViewBag.UserName
         </th>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.h1)
         </th>
         <th>
@@ -44,13 +45,14 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.h9)
-        </th>
+        </th>*@
 
     </tr>
 
 <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name) @ViewBag.Game1
+        <td rowspan="2" style="width:20%; font-weight:bolder">
+            @(@item.h1 + @item.h2 + @item.h3 + @item.h4 + @item.h5 + @item.h6 + @item.h7 + @item.h8 +
+            @item.h9 + @item.h10 + +@item.h11 + @item.h12 + @item.h13 + @item.h14 + @item.h15 + @item.h16 + @item.h17 + @item.h18)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.h1)
@@ -82,9 +84,9 @@
        
                                          </tr>
     <tr>
-            <td>
-           @Html.DisplayFor(modelItem => item.Name) @ViewBag.Game2
-        </td>
+        @*<td>
+           @Html.DisplayFor(modelItem => item.Name)
+        </td>*@
         <td>
             @Html.DisplayFor(modelItem => item.h10)
         </td>

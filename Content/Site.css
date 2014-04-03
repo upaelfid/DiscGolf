@@ -573,9 +573,15 @@ input[type="checkbox"].input-validation-error {
 
 /* tables
 ----------------------------------------------------------*/
-table,th,td, tr
+table
 {
 border:1px solid lightgray;
+border-collapse:collapse;
+width:100%;
+}
+td
+{
+    border:1px solid lightgray;
 border-collapse:collapse;
 }
 

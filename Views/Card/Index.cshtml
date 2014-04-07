@@ -7,9 +7,9 @@
     ViewBag.UserName = User.Identity.Name;
 }
 
-<p class="btn" style="height:2em; margin-top:-3.9em;">
-    @Html.ActionLink("Create New Card", "Create")
-</p>
+
+    @Html.ActionLink("Create New Card", "Create", null, new{@class="btncreate", @style="border:none; margin-top:-2.5em; color:white; padding-top:.8em;"})
+
 @*<h2 style="margin-bottom:1em; background-color:lightgrey;">Your Cards</h2>*@
 
 <table>

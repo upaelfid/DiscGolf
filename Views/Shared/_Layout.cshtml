@@ -6,12 +6,16 @@
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-     @* iOS specific meta tags *@
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="viewport" content="width=device-width, user-scalable=no">
-    <meta name="format-detection" content="telephone=no">
+        @* iOS specific meta tags *@
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
 
-    <link rel="apple-touch-startup-image" href="/bob-dobbs-splash.png" />
+        @* iOS splash screen*@
+        <link href="/bob-dobbs-splash.png"
+            media="(device-width: 320px) and (device-height: 568px)
+                 and (-webkit-device-pixel-ratio: 2)"
+            rel="apple-touch-startup-image">
 
         @Styles.Render("~/Content/css")
         @Scripts.Render("~/bundles/modernizr")

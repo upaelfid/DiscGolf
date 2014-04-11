@@ -22,14 +22,14 @@
     </head>
     <body>
         <header>
-            <div class="content-wrapper">
+            <div >
                 <div class="float-left">
                     <p class="site-title">
                         <a href="@Url.Action("Index", "Home")" >             
                        Bare Bones Golf Card</a>
                     </p>
                 </div>
-                <div class="float-right">
+                <div>
                     <section id="login">
                         @Html.Partial("_LoginPartial")
                     </section>
@@ -38,7 +38,7 @@
                             <li class="btn" style="clear:right; float:left; width:100%; height:2em;">@Html.ActionLink("Leader Board", "Index", "Home",null, new{@class="btn", @style="border:none;"})</li>
                            @* <li>@Html.ActionLink("About", "About", "Home")</li
                             <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
-                            <li class="btn" style="clear:left; float:left; width:100%; height:2em; margin-bottom:1px;">@Html.ActionLink("Score Cards", "Index", "Card",null, new{@class="btn", @style="border:none;"})</li>
+                            <li class="btn" style="clear:left; float:left; width:100%; height:2em; margin-bottom:.1px;">@Html.ActionLink("Score Cards", "Index", "Card",null, new{@class="btn", @style="border:none;"})</li>
                         </ul>
                     </nav>
                 </div>

@@ -99,6 +99,11 @@ h5, h6 {
     margin: 0 auto;
     max-width: 960px;
 }
+#wrapper
+{
+    margin:auto;
+    max-width: 450px;
+}
 
 #body {
     background-color: #cdded0;
@@ -107,10 +112,12 @@ h5, h6 {
 
 }
 
+
+
     .main-content {
         
         padding-left: 10px;
-        padding-top: 60px;
+        padding-top: 20px;
 
     }
 
@@ -594,9 +601,9 @@ input[type="checkbox"].input-validation-error {
 div select
 {
     height: 1.5em;
-    width: 100%;
+
     text-align: center;
-    font-size: 3em;
+    font-size: 3em; 
 }
 
 
@@ -618,6 +625,8 @@ border-collapse:collapse;
 *   Mobile Styles   *
 ********************/
 @media only screen and (max-width: 850px) {
+
+
 
     /* header
     ----------------------------------------------------------*/
@@ -751,6 +760,7 @@ border-collapse:collapse;
     input {
         width: 100%;
         text-align:center;
+        margin-top:30px;
     }
 
     /* login page */

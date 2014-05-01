@@ -484,6 +484,19 @@ fieldset {
             padding-bottom: 5px;
         }
 
+.editor-label
+{
+    border: 1px solid #fed7d2;
+    border-bottom:none;
+    background-color:#dcdad5;
+}
+.editor-field
+{
+    border: 1px solid #fed7d2;
+    margin-bottom:2px;
+    background-color:#e2e2e2
+}
+
 label {
     display: block;
     font-size: 1.2em;
@@ -758,9 +771,9 @@ border-collapse:collapse;
 
     /* forms */
     input {
-        width: 100%;
+        width: 20%;
         text-align:center;
-        margin-top:30px;
+        margin-top:10px;
     }
 
     /* login page */

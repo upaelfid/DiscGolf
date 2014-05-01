@@ -3,6 +3,25 @@
 
 @{
     ViewBag.Title = "Full Edit";
+    ViewBag.Hole1 = "HOLE 1";
+    ViewBag.Hole2 = "HOLE 2";
+    ViewBag.Hole3 = "HOLE 3";
+    ViewBag.Hole4 = "HOLE 4";
+    ViewBag.Hole5 = "HOLE 5";
+    ViewBag.Hole6 = "HOLE 6";
+    ViewBag.Hole7 = "HOLE 7";
+    ViewBag.Hole8 = "HOLE 8";
+    ViewBag.Hole9 = "HOLE 9";
+    ViewBag.Hole10 = "HOLE 10";
+    ViewBag.Hole11 = "HOLE 11";
+    ViewBag.Hole12 = "HOLE 12";
+    ViewBag.Hole13 = "HOLE 13";
+    ViewBag.Hole14 = "HOLE 14";
+    ViewBag.Hole15 = "HOLE 15";
+    ViewBag.Hole16 = "HOLE 16";
+    ViewBag.Hole17 = "HOLE 17";
+    ViewBag.Hole18 = "HOLE 18";
+
 }
 
 
@@ -16,36 +35,25 @@
 
         @Html.HiddenFor(model => model.Id)
 
-        <div class="editor-label">
+        <div  style="visibility:hidden;">
             @Html.HiddenFor(model => model.Name)
         </div>
-        <div class="editor-field">
+        <div style="visibility:hidden;">
             @Html.HiddenFor(model => model.Name)
             @Html.ValidationMessageFor(model => model.Name)
         </div>
 
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.h1)
+           <strong>@ViewBag.Hole1</strong>
         </div>
         <div class="editor-field">      
             @Html.EditorFor(model => model.h1)
             @Html.ValidationMessageFor(model => model.h1)
         </div>
 
-                    <div class="editor-label">
-            @Html.HiddenFor(model => model.h1)
-        </div>
-        <div class="editor-field">      
-            @Html.HiddenFor(model => model.h1)
-            @Html.ValidationMessageFor(model => model.h1)
-        </div>
-
-        
-
-
         <div class="editor-label">
-            @Html.LabelFor(model => model.h2)
+           <strong>@ViewBag.Hole2</strong>
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.h2)
@@ -53,7 +61,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.h3)
+            <strong>@ViewBag.Hole3</strong>
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.h3)
@@ -61,7 +69,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.h4)
+           <strong>@ViewBag.Hole4</strong>
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.h4)
@@ -69,7 +77,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.h5)
+            <strong>@ViewBag.Hole5</strong>
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.h5)
@@ -77,7 +85,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.h6)
+            <strong>@ViewBag.Hole6</strong>
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.h6)
@@ -85,7 +93,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.h7)
+            <strong>@ViewBag.Hole7</strong>
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.h7)
@@ -93,7 +101,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.h8)
+            <strong>@ViewBag.Hole8</strong>
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.h8)
@@ -101,7 +109,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.h9)
+            <strong>@ViewBag.Hole9</strong>
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.h9)
@@ -109,7 +117,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.h10)
+            <strong>@ViewBag.Hole10</strong>
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.h10)
@@ -117,7 +125,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.h11)
+            <strong>@ViewBag.Hole11</strong>
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.h11)
@@ -125,7 +133,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.h12)
+            <strong>@ViewBag.Hole12</strong>
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.h12)
@@ -133,7 +141,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.h13)
+            <strong>@ViewBag.Hole13</strong>
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.h13)
@@ -141,7 +149,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.h14)
+            <strong>@ViewBag.Hole14</strong>
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.h14)
@@ -149,7 +157,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.h15)
+            <strong>@ViewBag.Hole15</strong>
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.h15)
@@ -157,7 +165,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.h16)
+            <strong>@ViewBag.Hole16</strong>
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.h16)
@@ -165,7 +173,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.h17)
+            <strong>@ViewBag.Hole17</strong>
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.h17)
@@ -173,7 +181,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.h18)
+           <strong>@ViewBag.Hole18</strong>
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.h18)

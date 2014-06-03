@@ -1896,7 +1896,7 @@
             <strong>@ViewBag.Hole13</strong>
         </div>
         <div class="editor-field">      
-            @Html.EditorFor(model => model.h13)
+            @Html.DropDownListFor(model => model.h13, strokes)
             @Html.ValidationMessageFor(model => model.h13)
         </div>
 		

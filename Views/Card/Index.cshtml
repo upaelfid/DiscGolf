@@ -17,7 +17,7 @@
 @foreach (var item in Model) {
      if(User.Identity.Name == item.Name){
     <tr>
-        <th colspan="10">
+        <th colspan="11">
             @ViewBag.UserName
         </th>
     </tr>
@@ -54,7 +54,10 @@
         <td>
             @Html.DisplayFor(modelItem => item.h9)
         </td>
-       
+            <td rowspan="2" style="font-size:.5em;" class="verticalText">
+               @String.Format("{0:MMM dd yyyy}", item.gDate)
+            </td>
+
                                          </tr>
     <tr>
         @*<td>
@@ -88,7 +91,7 @@
             @Html.DisplayFor(modelItem => item.h18)
         </td>
         <tr>
-        <td colspan="10">
+        <td colspan="11">
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }, new{@class="btn", @style="float:left; width:50%;"})
 
             @Html.ActionLink("Delete", "Delete", new { id=item.Id }, new{@class="btn", @style="float:left; width:45%;"})  

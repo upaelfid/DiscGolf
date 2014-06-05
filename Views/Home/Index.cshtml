@@ -2,10 +2,11 @@
 
 @{
     ViewBag.Title = "Home Page";
+    ViewBag.Date = @DateTime.Now;
     
 }
 <table>
-<p><i>Only showing Active Score Cards</i></p>
+<p><i>Only showing Active Score Cards as of @ViewBag.Date</i></p>
     @foreach (var item in Model)
     {
         //string c = String.Format("{0:MMM dd yyyy}", item.gDate);

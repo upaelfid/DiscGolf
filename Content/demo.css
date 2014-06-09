@@ -37,11 +37,7 @@ p
 {
 	margin: 0 0 10px 0;
 }
-a, a:link, a:active, a:visited, a:hover
-{
-	color: #333;
-	text-decoration: underline;
-}
+
 pre
 {
 	font-size: 12px;

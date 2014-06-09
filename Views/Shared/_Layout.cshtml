@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>Bare Bones</title>
-        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-        <link rel="apple-touch-icon" href="/bare bones icon 150x.png" />
+<head>
+    <meta charset="utf-8" />
+    <title>Bare Bones</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/bare bones icon 150x.png" />
 
-        @* iOS specific meta tags *@
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="viewport" content="width=device-width, user-scalable=no">
-        <meta name="format-detection" content="telephone=no">
+    @* iOS specific meta tags *@
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
 
-        @* iOS splash screen*@
-        <link rel="apple-touch-startup-image" href="/bare-bones-splash-screen-640x.png" />
-        @Scripts.Render("~/bundles/sidemenu")
+    @* iOS splash screen*@
+    <link rel="apple-touch-startup-image" href="/bare-bones-splash-screen-640x.png" />
+    @Scripts.Render("~/bundles/sidemenu")
 
-        <script type="text/javascript">
-            $(function () {
-                $('nav#menu').mmenu();
-            });
-		</script>
-        @Styles.Render("~/Content/css")
-    </head>
-    <body>
-		<div id="page">
-			<div id="header">
-				<a href="#menu"></a>
-				Bare Bones
-			</div>
-			<nav id="menu" >
+    <script type="text/javascript">
+        $(function () {
+            $('nav#menu').mmenu();
+        });
+    </script>
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <div id="page">
+        <div id="header">
+            <a href="#menu"></a>
+            Bare Bones
+        </div>
+        <nav id="menu">
             <ul>
                 <li>@Html.ActionLink("My Score Cards", "Index", "Card")</li>
                 <li>@Html.ActionLink("History Cards", "HistoryCards", "Home")</li>
@@ -36,24 +36,24 @@
                 <li><a href="mailto:upaelfid@gmail.com?subject=Disc Golf Card Suggestions&body=Could you add or change the following:">
                     Suggestions</a></li>
             </ul>
-			</nav>
-			                    <section id="login">
-                        @Html.Partial("_LoginPartial")
-                    </section>
-			    @RenderSection("featured", required: false)
-            <section class="content-wrapper main-content clear-fix" >
-                @RenderBody()
-            </section>
-			        <footer>
+        </nav>
+        <section id="login">
+            @Html.Partial("_LoginPartial")
+        </section>
+        @RenderSection("featured", required: false)
+        <section class="content-wrapper main-content clear-fix">
+            @RenderBody()
+        </section>
+        <footer>
             <div class="content-wrapper">
                 <div class="float-left">
                     <p>&copy; @DateTime.Now.Year - Disc Golf Score Card</p>
                 </div>
             </div>
         </footer>
-		</div>
-        @Scripts.Render("~/bundles/jquery")
-        @RenderSection("scripts", required: false)
-        
-    </body>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+
+</body>
 </html>

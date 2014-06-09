@@ -27,16 +27,6 @@ a {
     text-decoration: none;
 }
 
-    a:link, a:visited,
-    a:active, a:hover {
-        color: #333;
-    }
-
-    a:hover {
-        background-color: #c7d1d6;
-    }
-
-
 
     header .float-left,
     header .float-right {

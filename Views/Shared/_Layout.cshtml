@@ -16,17 +16,17 @@
     @Scripts.Render("~/bundles/sidemenu")
 
     <script type="text/javascript">
-        $(function () {
+        document.onclick = $(function () {
             $('nav#menu').mmenu();
         });
+        a.onclick = function () { };
     </script>
     @Styles.Render("~/Content/css")
 </head>
 <body>
     <div id="page">
         <div id="header">
-        <span>
-            <a href="#menu" style="cursor:pointer;"></a></span>
+            <a href="#menu"></a>
             Bare Bones
         </div>
         <nav id="menu">

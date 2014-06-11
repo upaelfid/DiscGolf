@@ -644,7 +644,7 @@ white-space: nowrap;
     /* login */
     #login {
         font-size: 1.35em;
-        margin: 0;
+        margin: 20px;
         text-align: center;
     }
 
@@ -656,8 +656,8 @@ white-space: nowrap;
         #login li {
             display: inline;
             list-style: none;
-            margin: 0;
-            padding: 0;
+            margin: 5px;
+            padding: 10px;
         }
 
         #login a {

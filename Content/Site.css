@@ -260,7 +260,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d0e4f7', end
     ul#menu {
         margin: 0;
         padding: 0;
-        text-align: center;
+        text-align: left;
     }
 
         ul#menu li {
@@ -681,7 +681,7 @@ white-space: nowrap;
     ul#menu {
         margin: 0;
         padding: 0;
-        text-align: center;
+        text-align: left;
     }
 
         ul#menu li {

@@ -32,7 +32,7 @@
             Bare Bones
         </div>
         <nav id="menu">
-            <ul style="text-align:left;">
+            <ul style="text-align: left;">
                 <li>@Html.ActionLink("My Score Cards", "Index", "Card")</li>
                 <li>@Html.ActionLink("Top Playaz", "HistoryCards", "Home")</li>
                 <li>@Html.ActionLink("Today's Game", "Index", "Home")</li>
@@ -50,11 +50,7 @@
             @RenderBody()
         </section>
         <footer>
-            <div >
-                <div >
-                    <p>&copy; @DateTime.Now.Year - Disc Golf Score Card</p>
-                </div>
-            </div>
+            <p>&copy; @DateTime.Now.Year - Disc Golf Score Card</p>
         </footer>
     </div>
     @Scripts.Render("~/bundles/jquery")

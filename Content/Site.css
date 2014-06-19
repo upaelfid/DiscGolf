@@ -2,7 +2,7 @@
     background-color: #e2e2e2;
     margin: 0;
     padding: 0;
-
+     height:100%;
 }
 img{ border:0; }
 
@@ -16,7 +16,7 @@ body {
     padding: 0;
     text-align:center;
     margin-top:-10px;
-  
+  height:100%;
 }
 
 a {
@@ -96,8 +96,8 @@ h5, h6 {
 }
 #wrapper
 {
-    margin:auto;
-    max-width: 450px;
+    /*margin:auto;
+    max-width: 450px;*/
 }
 
 #body {
@@ -124,20 +124,20 @@ h5, h6 {
 
 
 
-    footer .float-left,
+    /*footer .float-left,
     footer .float-right {
         float: none;
     }
 
     footer {
         text-align: center;
-        height: auto;
-        padding: 10px 0;
+        height: 10px;
+        
     }
 
         footer p {
             margin: 0;
-        }
+        }*/
 
 
 /* site title
@@ -796,20 +796,21 @@ white-space: nowrap;
 
     /* footer
     ----------------------------------------------------------*/
-    footer .float-left,
+    /*footer .float-left,
     footer .float-right {
         float: none;
-    }
+    }*/
 
     footer {
-        text-align: center;
-        height: auto;
-        padding: 10px 0;
+ position: fixed;
+ bottom: 0;
+ left: 0;
+ width: 100%;
     }
 
-        footer p {
+        /*footer p {
             margin: 0;
-        }
+        }*/
 
 
 }

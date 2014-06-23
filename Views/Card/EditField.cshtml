@@ -49,7 +49,8 @@
              <strong>@ViewBag.Hole1</strong>
         </div>
         <div class="editor-field">
-            @Html.DropDownListFor(model =>model.h1, strokes, new { onchange="this.form.submit();" })
+        @Html.EditorFor(model => model.h1, new { @type = "tel", @pattern="[0-9]{10}", onchange="this.form.submit();" })
+           @* @Html.DropDownListFor(model =>model.h1, strokes, new { onchange="this.form.submit();" })*@
             @Html.ValidationMessageFor(model => model.h1)
         </div>
 

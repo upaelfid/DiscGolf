@@ -2,7 +2,7 @@
     background-color: #e2e2e2;
     margin: 0;
     padding: 0;
-     height:100%;
+
 }
 img{ border:0; }
 
@@ -111,11 +111,14 @@ h5, h6 {
     .main-content,
     .featured + .main-content {
         background-position: 10px 0;
+        
+       
     }
 
     .content-wrapper {
         padding-right: 10px;
         padding-left: 10px;
+
     }
 
     .featured .content-wrapper {
@@ -464,7 +467,8 @@ fieldset {
 {
     border: 1px solid lightgray;
     margin-bottom:2px;
-    background-color:#e2e2e2
+    background-color:#e2e2e2;
+    
 }
 
 label {
@@ -695,6 +699,7 @@ white-space: nowrap;
     .main-content,
     .featured + .main-content {
         background-position: 10px 0;
+
     }
 
     .content-wrapper {
@@ -801,12 +806,14 @@ white-space: nowrap;
         float: none;
     }*/
 
-    footer {
+    footer
+    {
         background: #555;
- position:fixed;
- bottom: 0;
- left: 0;
- width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        color: white;
     }
 
         /*footer p {

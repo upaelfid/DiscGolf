@@ -50,7 +50,8 @@
         </div>
         <div class="editor-field">
        @* @Html.EditorFor(model => model.h1, new { @type = "tel", onchange="this.form.submit();" })*@
-            @Html.DropDownListFor(model =>model.h1, strokes, new { onchange="this.form.submit();" })
+       <input name="h1" class="text-box single-line" id="h1" type="tel" data-val-required="The h1 field is required." data-val="true" data-val-number="The field h1 must be a number." value="0" onChange="this.form.submit();"></input>
+           @* @Html.DropDownListFor(model =>model.h1, strokes, new { onchange="this.form.submit();" })*@
             @Html.ValidationMessageFor(model => model.h1)
         </div>
 

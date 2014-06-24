@@ -467,8 +467,12 @@ fieldset {
 {
     border: 1px solid lightgray;
     margin-bottom:2px;
-    background-color:#e2e2e2;
-    
+    background-color:#e2e2e2;  
+}
+
+.text-box
+{
+    height:4em;
 }
 
 label {
@@ -760,6 +764,7 @@ white-space: nowrap;
         width: 20%;
         text-align:center;
         margin-top:10px;
+        
     }
 
     /* login page */
@@ -779,25 +784,13 @@ white-space: nowrap;
         float: none;
         width: auto;
     }
-
-        .score
+    
+    #UserName, #Password
     {
-        padding: 2px;
-        border-bottom: 2px solid black;
-        padding-bottom: 10px;
+        height:4em;
     }
 
-    .score h4
-    {
-        color:maroon;
-        padding: 5px;
-        background: #cccc99
-    }
 
-    .score p
-    {
-        font-size: 1.8em;
-    }
 
     /* footer
     ----------------------------------------------------------*/

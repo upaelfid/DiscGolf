@@ -2,9 +2,29 @@
 
 @{
     ViewBag.Title = "History Page";
+    var uniqueCards = (from r in Model
+                      select new { Id=r.Id, uSum=r.h1+ r.h2+ r.h3+r.h4+ r.h5+ r.h6+ r.h7+ r.h8+r.h9+ r.h10+ r.h11+r.h12+r.h13+r.h14+ r.h15+ r.h16+r.h17+r.h18}).Distinct().ToList();
+
+    var players = (from r in Model
+                   select new { Name = r.Name, pSum = r.h1 + r.h2 + r.h3 + r.h4 + r.h5 + r.h6 + r.h7 + r.h8 + r.h9 + r.h10 + r.h11 + r.h12 + r.h13 + r.h14 + r.h15 + r.h16 + r.h17 + r.h18 }).Distinct().ToList();
+
+    var pMinCard = from p in players
+            group p by p.Name into grp
+            let MinCard = grp.Min(g => g.pSum)
+            from p in grp
+            where p.pSum == MinCard
+            select p;
+
+    var uniqueIds = (from u in uniqueCards
+                 join p in pMinCard on u.uSum equals p.pSum
+                 select new{Id = u.Id}).Distinct();
+
+    var topCards = (from r in Model
+                     join p in uniqueIds on r.Id equals p.Id
+                     select r).Distinct();      
 }
 <table>
-    @foreach (var item in Model)
+    @foreach (var item in topCards)
     {
         <tr>
             <th colspan="10" style="margin-top: 4em;">

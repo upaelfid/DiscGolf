@@ -87,7 +87,7 @@
             </td>
 
         </tr>
-            if (User.Identity.Name == item.Name)
+            if (User.Identity.Name == item.Name && item.h18 ==0)
             { <td colspan="11">@Html.ActionLink("UPDATE", "EditField", "Card", new { id = item.Id }, new { @class = "btn", @style = "float:left; width:100%;" })
     </td>}
             else

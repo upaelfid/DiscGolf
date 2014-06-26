@@ -20,6 +20,7 @@
                  select new{Id = u.Id}).Distinct();
 
     var topCards = (from r in Model
+                     orderby (r.h1 + r.h2 + r.h3 + r.h4 + r.h5 + r.h6 + r.h7 + r.h8 + r.h9 + r.h10 + r.h11 + r.h12 + r.h13 + r.h14 + r.h15 + r.h16 + r.h17 + r.h18) ascending
                      join p in uniqueIds on r.Id equals p.Id
                      select r).Distinct();      
 }

@@ -6,12 +6,7 @@
     
 }
 <table>
-
-    <ul style="list-style:none;">
-        <li>@Html.ActionLink("Refresh", "Index", "Home", new { @class = "btn", @style = "float:center; width:100%;" })</li>
-    </ul>
 <p><i>Only showing Active Score Cards as of @ViewBag.Date</i></p>
-
     @foreach (var item in Model)
     {
         //string c = String.Format("{0:MMM dd yyyy}", item.gDate);

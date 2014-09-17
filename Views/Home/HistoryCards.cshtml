@@ -3,7 +3,8 @@
 @{
     ViewBag.Title = "History Page";
     var uniqueCards = (from r in Model
-                      select new { Id=r.Id, uSum=r.h1+ r.h2+ r.h3+r.h4+ r.h5+ r.h6+ r.h7+ r.h8+r.h9+ r.h10+ r.h11+r.h12+r.h13+r.h14+ r.h15+ r.h16+r.h17+r.h18}).Distinct().ToList();
+                       where r.Id != 1 && r.Id != 2
+                      select new { Id=r.Id, uSum=r.h1+ r.h2+ r.h3+r.h4+ r.h5+ r.h6+ r.h7+ r.h8+r.h9+ r.h10+ r.h11+r.h12+r.h13+r.h14+ r.h15+ r.h16+r.h17+r.h18} ).Distinct().ToList() ;
 
     var players = (from r in Model
                    select new { Name = r.Name, pSum = r.h1 + r.h2 + r.h3 + r.h4 + r.h5 + r.h6 + r.h7 + r.h8 + r.h9 + r.h10 + r.h11 + r.h12 + r.h13 + r.h14 + r.h15 + r.h16 + r.h17 + r.h18 }).Distinct().ToList();

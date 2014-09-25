@@ -772,7 +772,7 @@ white-space: nowrap;
         border-right: none;
         float: none;
         width: auto;
-    }
+    } 
 
         #loginForm .validation-error {
             display: block;

@@ -2,13 +2,13 @@
 
 @{
     ViewBag.Title = "Home Page";
-    ViewBag.Date = @DateTime.Now;
+    ViewBag.Date = String.Format("{0:dd-MM-yyyy}  {0:ss}", @DateTime.Now);
   
 }
+        <section id="login">
+            @Html.Partial("_LoginPartial")
+        </section>
 <table>
-
-
-
 
     <p><i>Only showing Active Score Cards as of @ViewBag.Date</i></p>
     <p>@Html.ActionLink("Refresh", "Index", "Home", new { @class = "btn", @style = "float:center; width:100%;" })

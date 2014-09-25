@@ -5,13 +5,14 @@
     ViewBag.Game1 = "1 - 9";
     ViewBag.Game2 = "10 - 18";
     ViewBag.UserName = User.Identity.Name;
-   
+     
 }
 
 
-    @Html.ActionLink("Create New Card", "Create", null, new{@class="btncreate", @style="border:none; color:white;"})
 
-@*<h2 style="margin-bottom:1em; background-color:lightgrey;">Your Cards</h2>*@
+    @Html.ActionLink("Create New Card", "Create", null, new{@class="btncreate", @style="border:none; color:white; padding-top:10px;"})
+
+<h2 style="margin-bottom:1em;"> @ViewBag.UserName.ToUpper() SCORE CARDS</h2>
 
 <table>
 @foreach (var item in Model) {

@@ -626,8 +626,7 @@ white-space: nowrap;
 *   Mobile Styles   *
 ********************/
 @media only screen and (max-width: 850px) {
-
-
+x
 
     /* header
     ----------------------------------------------------------*/
@@ -638,7 +637,7 @@ white-space: nowrap;
 #scorecard{
     display: inline;
 
-	margin-top: .6em;
+	margin-top: .6em
     margin-bottom: .6em;
     margin-right: 4em;
 }

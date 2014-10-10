@@ -3,7 +3,6 @@
 @{
     ViewBag.Title = "Home Page";
     ViewBag.Date = String.Format("{0:dd-MM-yyyy}  {0:ss}", @DateTime.Now);
-  
 }
         <section id="login">
             @Html.Partial("_LoginPartial")
@@ -11,7 +10,7 @@
 <table>
 
     <p><i>Only showing Active Score Cards as of @ViewBag.Date</i></p>
-    <p>@Html.ActionLink("Refresh", "Index", "Home", new { @class = "btn", @style = "float:center; width:100%;" })
+@*    <p>@Html.ActionLink("Refresh", "Index", "Home", new { @class = "uk-width-1-1 uk-button uk-button-primary", @style = "float:center; width:100%;" })*@
     </p>
 
     @foreach (var item in Model)
@@ -106,7 +105,7 @@
 
     }
 
-    <table>
+@*    <table>
         <tr>
             <th colspan="11" style="margin-top: 4em;">Name
             </th>
@@ -160,6 +159,6 @@
         </tr>
     </table>
     <p><i>Go to register if you havent already then go to Score Cards and create a card</i>
-    </p>
+    </p>*@
 
 </table>

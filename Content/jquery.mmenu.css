@@ -76,7 +76,7 @@
   font-size: 18px; }
   .mm-list a,
   .mm-list a:hover {
-    text-decoration: none; }
+    text-decoration: none;}
   .mm-list > li {
     position: relative; }
     .mm-list > li > a,
@@ -225,7 +225,7 @@ html.mm-opened .mm-page {
   border-color: rgba(0, 0, 0, 0.15); }
 .mm-menu .mm-list > li.mm-selected > a:not(.mm-subopen),
 .mm-menu .mm-list > li.mm-selected > span {
-  background: rgba(0, 0, 0, 0.1); }
+  background: black; }
 .mm-menu .mm-list > li.mm-label {
   background: rgba(255, 255, 255, 0.05); }
 .mm-menu.mm-vertical .mm-list li.mm-opened > a.mm-subopen,

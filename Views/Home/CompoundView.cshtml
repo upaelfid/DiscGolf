@@ -1,0 +1,195 @@
+﻿@model DiscGolf.Models.CompoundViewModel
+@{
+    var compound = (from r in Model.AllCards
+                    from s in Model.AllCourse
+                    where r.ccID == s.cID && r.Name == "fooz"
+                    select new { r.Name, s.cName, s.cTotPar, s.cSSE
+                               , r.h1, r.h2, r.h3, r.h4, r.h5, r.h6, r.h7, r.h8, r.h9
+                               , r.h10, r.h11, r.h12, r.h13, r.h14, r.h15, r.h16, r.h17, r.h18
+                               , s.cdh1, s.cdh2, s.cdh3, s.cdh4, s.cdh5, s.cdh6, s.cdh7, s.cdh8, s.cdh9
+                               , s.cdh10, s.cdh11, s.cdh12, s.cdh13, s.cdh14, s.cdh15, s.cdh16, s.cdh17, s.cdh18 });
+
+
+}
+
+
+<h1>Top Playaz</h1>
+<style>
+    table:nth-child(2n+1)
+    {
+        background-color:#FFF;
+    }
+</style>
+<script src="/Scripts/jquery.accordion.js" type="text/javascript"></script>
+	<script type="text/javascript">
+    $(document).ready(function() {
+        $.fn.slideFadeToggle = function(speed, easing, callback) {
+            return this.animate({opacity: 'toggle', height: 'toggle'}, speed, easing, callback);
+        };
+        //accordion
+        $('.accordion').accordion({
+
+            cookieName: 'accordion_nav',
+            speed: 'slow',
+            animateOpen: function (elem, opts) { //replace the standard slideUp with custom function
+                elem.next().stop(true, true).slideFadeToggle(opts.speed);
+            },
+            animateClose: function (elem, opts) { //replace the standard slideDown with custom function
+                elem.next().stop(true, true).slideFadeToggle(opts.speed);
+            }
+        });
+
+    });
+</script>
+    <div class="accordion" id="section1">Heading<span></span></div>
+    <div class="container">
+        <div class="content">
+            <div>Sample Content</div>
+            <p>Content here....</p>
+        </div>
+    </div>
+
+    @foreach (var item in compound)
+    {
+        <table>
+        <tr>
+            <th colspan="10" style="margin-top: 4em;">
+                @item.cName
+            </th>
+        </tr>
+        <tr>
+            <td colspan="5">Par:  @Html.DisplayFor(modelItem => item.cTotPar)
+            </td>
+            <td colspan="5">Pro:  @Html.DisplayFor(modelItem => item.cSSE)
+            </td>
+        </tr>
+        <tr>
+            <td colspan="10">@Html.DisplayFor(modelItem => item.Name)</td>
+        </tr>
+                <tr>
+            <td rowspan="4" style="width: 20%; font-weight: bolder; font-size: 3em;">
+                @(@item.h1 + @item.h2 + @item.h3 + @item.h4 + @item.h5 + @item.h6 + @item.h7 + @item.h8 +
+            @item.h9 + @item.h10 + +@item.h11 + @item.h12 + @item.h13 + @item.h14 + @item.h15 + @item.h16 + @item.h17 + @item.h18)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.h1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.h2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.h3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.h4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.h5)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.h6)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.h7)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.h8)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.h9)
+            </td>
+        </tr>
+                <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.cdh1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cdh2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cdh3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cdh4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cdh5)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cdh6)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cdh7)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cdh8)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cdh9)
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.h10)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.h11)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.h12)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.h13)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.h14)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.h15)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.h16)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.h17)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.h18)
+            </td>
+
+        </tr>
+                <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.cdh10)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cdh11)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cdh12)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cdh13)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cdh14)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cdh15)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cdh16)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cdh17)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cdh18)
+            </td>
+
+        </tr>
+        </table>
+    }
+
+

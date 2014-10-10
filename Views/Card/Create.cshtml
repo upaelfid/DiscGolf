@@ -2,6 +2,12 @@
 
 @{
     ViewBag.Title = "Create";
+    SelectList courses = new SelectList(
+        new List<SelectListItem>
+        {
+            new SelectListItem { Selected = false, Text = "Northampton State Hospital", Value = "602"},
+            new SelectListItem { Selected = false, Text = "Crane Hill DGC", Value = "3071"},
+        }, "Value", "Text",1);
 }
 
 @*<h2>Create</h2>*@
@@ -18,6 +24,13 @@
         <div  style="visibility:hidden;"> 
             @Html.HiddenFor(model => model.Name)
             @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+                <div  style="margin-top:10px;"> 
+@*                @Html.DropDownListFor(model => model.ccID, new SelectList(Model., "OrderTemplateId", "OrderTemplateName", 1), "Please select an order template")
+                @Html.DropDownListFor(n => n.SelectedOrderId, new SelectList(Model.OrderTemplates, "OrderTemplateId", "OrderTemplateName", 1), "Please select an order template")*@
+             @Html.DropDownListFor(model =>model.ccID , courses)
+            @Html.ValidationMessageFor(model => model.ccID)
         </div>
 
         <div  style="visibility:hidden;"> 
@@ -165,7 +178,7 @@
         </div>
 
         <p>
-            <input type="submit" value="Create" />
+            <input type="submit" value="Create" class="uk-width-1-1 uk-button uk-button-primary " />
         </p>
     </fieldset>
 }

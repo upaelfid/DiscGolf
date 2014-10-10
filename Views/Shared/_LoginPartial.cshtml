@@ -5,7 +5,8 @@
     </text>
 } else {
     <ul style="display:block;">
-        <li  >@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
-        <li class="btn" >@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+@*        <li  >@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>*@
+        <li class="uk-width-1-1 uk-button uk-button-primary" style=" color:white;">@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+         <li class="uk-width-1-1 uk-button uk-button-primary" style="color:white;">@Html.ActionLink("Refresh", "Index", "Home")</li>
     </ul>
 }

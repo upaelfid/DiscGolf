@@ -462,6 +462,7 @@ fieldset {
     border: 1px solid lightgray;
     border-bottom:none;
     background-color:#dcdad5;
+    margin-top:10px;
 }
 .editor-field
 {
@@ -470,10 +471,10 @@ fieldset {
     background-color:#e2e2e2;  
 }
 
-.text-box
+/*.text-box
 {
     height:4em;
-}
+}*/
 
 label {
     display: block;
@@ -486,9 +487,10 @@ label.checkbox {
 }
 
     input {
-        width: 20%;
+        width: 5%;
 
         margin-top:10px;
+        margin-bottom:10px;
     }
 
 #create
@@ -591,12 +593,23 @@ div select
 
 /* tables
 ----------------------------------------------------------*/
-table
-{
-border:1px solid lightgray;
+
+    table
+    {
+        border:1px solid lightgray;
 border-collapse:collapse;
-width:100%;
-}
+        border-radius:10px;
+        margin-left:5px;
+        width:98%;
+        margin-bottom:5px;
+    }
+
+    table:nth-child(2n+1)
+    {
+        background-color:#FFF;
+    }
+
+
 td
 {
     border:1px solid lightgray;

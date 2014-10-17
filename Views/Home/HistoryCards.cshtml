@@ -25,10 +25,12 @@
                      join p in uniqueIds on r.Id equals p.Id
                      select r).Distinct();      
 }
-<h1>Top Playaz</h1>
-<table>
+
+<h1>TOP CARDS</h1>
+
     @foreach (var item in topCards)
     {
+        <table>
         <tr>
             <th colspan="10" style="margin-top: 4em;">
                 @item.Name
@@ -100,7 +102,7 @@
                 @Html.DisplayFor(modelItem => item.h18)
             </td>
         </tr>
-       
+       </table>
         }
 
-</table>
+

@@ -1,19 +1,12 @@
 ﻿@model IEnumerable<DiscGolf.Models.Card>
-
 @{
     ViewBag.Title = "Home Page";
     ViewBag.Date = String.Format("{0:MMMM} {0:dd} {0:yyyy}", @DateTime.Now);
     var counter = 0;
 }
-
         <section id="login">
             @Html.Partial("_LoginPartial")
         </section>
-
-
-    <p style="color:lightgray; font-size:.6em;"><i>Showing Active Score Cards for @ViewBag.Date</i></p>
-
-
     @foreach (var item in Model)
     {
         //Display only active cards
@@ -21,16 +14,13 @@
         {
             //Add to the counter to remove placeholder
             counter++;
-            
             //Begin Card
             <table>
         <tr>
             <th colspan="11" style="margin-top: 4em;">
                 @item.Name
             </th>
-
         </tr>
-
         <tr>
             <td rowspan="2" style="width: 20%; font-weight: bolder; font-size: 3em;">
                 @(@item.h1 + @item.h2 + @item.h3 + @item.h4 + @item.h5 + @item.h6 + @item.h7 + @item.h8 +
@@ -100,20 +90,18 @@
             {    <td colspan="11">@Html.ActionLink("UPDATE", "EditField", "Card", new { id = item.Id }, new { @class = "uk-width-1-1 uk-button uk-button-primary", @style = "float:center; width:100%;" })
                </td>
             }
-
             else
             {
-
             }
 </table>
         }
         else{}
-
     }
     @if (counter == 0)
     {
-            <div style="padding-top:2em; padding-bottom:1em;"><img src="~/Images/griffin-discgolf-banner.png" width="100%" /></div>
-         <table style="margin-bottom:4em;">
+         <p style="color:gray; font-size:4em; line-height:.8em;">Disc Golf </p>
+         <p style="color:gray; font-size:4em; line-height:.8em;">Score keeper</p>
+         @*<table style="margin-bottom:2em; margin-top:4em;">
         <tr>
             <th colspan="11" style="margin-top: 4em;">No Active Score Cards
             </th>
@@ -142,9 +130,7 @@
             <td rowspan="2" style="font-size: .5em;">date
             </td>
         </tr>
-
         <tr>
-
             <td>h
             </td>
             <td>h
@@ -163,9 +149,58 @@
             </td>
             <td>h
             </td>
-
         </tr>
     </table>
-
+        <table style="margin-bottom:3em;">
+        <tr>
+            <th colspan="11" style="margin-top: 4em;">No Active Score Cards
+            </th>
+        </tr>
+        <tr>
+            <td rowspan="2" style="width: 20%; font-weight: bolder; font-size: 3em;">Sc
+            </td>
+            <td>h
+            </td>
+            <td>h
+            </td>
+            <td>h
+            </td>
+            <td>h
+            </td>
+            <td>h
+            </td>
+            <td>h
+            </td>
+            <td>h
+            </td>
+            <td>h
+            </td>
+            <td>h
+            </td>
+            <td rowspan="2" style="font-size: .5em;">date
+            </td>
+        </tr>
+        <tr>
+            <td>h
+            </td>
+            <td>h
+            </td>
+            <td>h
+            </td>
+            <td>h
+            </td>
+            <td>h
+            </td>
+            <td>h
+            </td>
+            <td>h
+            </td>
+            <td>h
+            </td>
+            <td>h
+            </td>
+        </tr>
+    </table>*@
+     <div style="padding-top:2em; padding-bottom:1em;"><img src="~/Images/griffin-discgolf-banner.png" width="100%" /></div>
+        <p style="color:gray; font-size:.6em;"><i>Showing Active Score Cards for @ViewBag.Date</i></p>
     }
-

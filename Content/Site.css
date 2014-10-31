@@ -822,7 +822,65 @@ x
         /*footer p {
             margin: 0;
         }*/
+/*Google signin button*/
 
+    #Google {
+         background: url('/Images/btn_red_32.png') transparent 5px 50% no-repeat;
+      display: inline-block;
+      background: #dd4b39;
+      color: white;
+      width: 165px;
+      border-radius: 5px;
+      white-space: nowrap;
+    }
+    #Google:hover {
+      background: #e74b37;
+      cursor: hand;
+    }
+    span.label {
+      font-weight: bold;
+    }
+    span.icon {
+      background: url('/Images/btn_red_32.png') transparent 5px 50% no-repeat;
+      display: inline-block;
+      vertical-align: middle;
+      width: 35px;
+      height: 35px;
+      border-right: #bb3f30 1px solid;
+    }
+    span.buttonText {
+      display: inline-block;
+      vertical-align: middle;
+      padding-left: 35px;
+      padding-right: 35px;
+      font-size: 14px;
+      font-weight: bold;
+      /* Use the Roboto font that is loaded in the <head> */
+      font-family: 'Roboto',arial,sans-serif;
+    }
+/*Cool code taht puts text between a line*/
+h1 {
+    overflow: hidden;
+    text-align: center;
+}
+h1:before,
+h1:after {
+    background-color: lightgray;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+}
+h1:before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+h1:after {
+    left: 0.5em;
+    margin-right: -50%;
+}
 
   /*Accordion*/      
 .accordion {

@@ -16,8 +16,7 @@
 <h1>Top Playaz</h1>
 <style>
     table:nth-child(2n+1)
-    {
-        background-color:#FFF;
+    {        background-color:#FFF;
     }
 </style>
 <script src="/Scripts/jquery.accordion.js" type="text/javascript"></script>
@@ -48,6 +47,21 @@
             <p>Content here....</p>
         </div>
     </div>
+@*  @for(var themeIndex = 0; themeIndex < Model.Theme.Count(); themeIndex++)
+{
+   @Html.LabelFor(model => model.Theme[themeIndex])
+
+   @for(var productIndex=0; productIndex < Model.Theme[themeIndex].Products.Count(); productIndex++)
+   {
+      @Html.LabelFor(model=>model.Theme[themeIndex].Products[productIndex].name)
+      @for(var orderIndex=0; orderIndex < Model.Theme[themeIndex].Products[productIndex].Orders; orderIndex++)
+      {
+          @Html.TextBoxFor(model => model.Theme[themeIndex].Products[productIndex].Orders[orderIndex].Quantity)
+          @Html.TextAreaFor(model => model.Theme[themeIndex].Products[productIndex].Orders[orderIndex].Note)
+          @Html.EditorFor(model => model.Theme[themeIndex].Products[productIndex].Orders[orderIndex].DateRequestedDeliveryFor)
+      }
+   }
+}*@
 
     @foreach (var item in compound)
     {

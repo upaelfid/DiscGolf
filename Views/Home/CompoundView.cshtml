@@ -1,19 +1,20 @@
 ﻿@model DiscGolf.Models.CompoundViewModel
 @{
+    
     var compound = (from r in Model.AllCards
                     from s in Model.AllCourse
-                    where r.ccID == s.cID && r.Name == "fooz"
+                    where r.ccID == s.cID && r.Name == "fooz" && r.Id != 1 && r.Id != 2 && r.Id != 31 && r.h18 != 0
+                    orderby r.ccID, (r.h1 + r.h2 + r.h3 + r.h4 + r.h5 + r.h6 + r.h7 + r.h8 + r.h9 + r.h10 + r.h11 + r.h12 + r.h13 + r.h14 + r.h15 + r.h16 + r.h17 + r.h18) ascending
                     select new { r.Name, s.cName, s.cTotPar, s.cSSE
                                , r.h1, r.h2, r.h3, r.h4, r.h5, r.h6, r.h7, r.h8, r.h9
                                , r.h10, r.h11, r.h12, r.h13, r.h14, r.h15, r.h16, r.h17, r.h18
                                , s.cdh1, s.cdh2, s.cdh3, s.cdh4, s.cdh5, s.cdh6, s.cdh7, s.cdh8, s.cdh9
                                , s.cdh10, s.cdh11, s.cdh12, s.cdh13, s.cdh14, s.cdh15, s.cdh16, s.cdh17, s.cdh18 });
-
-
+                
 }
 
 
-<h1>Top Playaz</h1>
+<h1>TOP CARDS</h1>
 <style>
     table:nth-child(2n+1)
     {        background-color:#FFF;
@@ -40,31 +41,13 @@
 
     });
 </script>
-    <div class="accordion" id="section1">Heading<span></span></div>
-    <div class="container">
-        <div class="content">
-            <div>Sample Content</div>
-            <p>Content here....</p>
-        </div>
-    </div>
-@*  @for(var themeIndex = 0; themeIndex < Model.Theme.Count(); themeIndex++)
-{
-   @Html.LabelFor(model => model.Theme[themeIndex])
-
-   @for(var productIndex=0; productIndex < Model.Theme[themeIndex].Products.Count(); productIndex++)
-   {
-      @Html.LabelFor(model=>model.Theme[themeIndex].Products[productIndex].name)
-      @for(var orderIndex=0; orderIndex < Model.Theme[themeIndex].Products[productIndex].Orders; orderIndex++)
-      {
-          @Html.TextBoxFor(model => model.Theme[themeIndex].Products[productIndex].Orders[orderIndex].Quantity)
-          @Html.TextAreaFor(model => model.Theme[themeIndex].Products[productIndex].Orders[orderIndex].Note)
-          @Html.EditorFor(model => model.Theme[themeIndex].Products[productIndex].Orders[orderIndex].DateRequestedDeliveryFor)
-      }
-   }
-}*@
-
-    @foreach (var item in compound)
+    @foreach (var courseName in compound.GroupBy( a => a.cName).ToList())
     {
+        <div class="accordion" id="section1">@courseName.Key</div>
+            <div class="container">
+        <div class="content">
+        @foreach( var item in compound.Where(b => b.cName==@courseName.Key)){
+            
         <table>
         <tr>
             <th colspan="10" style="margin-top: 4em;">
@@ -204,6 +187,9 @@
 
         </tr>
         </table>
+        }
+                </div>
+    </div>
     }
 
 

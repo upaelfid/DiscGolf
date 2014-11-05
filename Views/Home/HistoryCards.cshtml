@@ -1,16 +1,20 @@
 ﻿@model IEnumerable<DiscGolf.Models.Card>
 @{
     ViewBag.Title = "History Page";
+    //This section probably should be in the controller. Anyhow...selects players with completed cards (only checks if the total is 0 or if the last hole is 0). this excludes dummy data r.Id=1 and r.Id=2. Excluded r.ID =31 per request
     var players = (from r in Model
+                   where r.Id != 1 && r.Id != 2 && r.Id != 31 && r.h18 != 0
                    select new { Name = r.Name, pSum = r.h1 + r.h2 + r.h3 + r.h4 + r.h5 + r.h6 + r.h7 + r.h8 + r.h9 + r.h10 + r.h11 + r.h12 + r.h13 + r.h14 + r.h15 + r.h16 + r.h17 + r.h18, r.Id, r.ccID }).Distinct().ToList();
+    //from players get their best score and the card id for their best score              
     var pMinCard = from p in players
                    group p by new { p.Name, p.ccID } into grp
                    let MinCard = grp.Min(g => g.pSum)
                    from p in grp
-                   where p.pSum == MinCard && p.ccID != 0
+                   where p.pSum == MinCard && p.pSum != 0
                    select p;
+    //join to best score and card Id to get full card data to display. Orders by course ID and best score ascending               
     var topCards = (from r in Model
-                    orderby (r.h1 + r.h2 + r.h3 + r.h4 + r.h5 + r.h6 + r.h7 + r.h8 + r.h9 + r.h10 + r.h11 + r.h12 + r.h13 + r.h14 + r.h15 + r.h16 + r.h17 + r.h18) ascending
+                    orderby r.ccID, (r.h1 + r.h2 + r.h3 + r.h4 + r.h5 + r.h6 + r.h7 + r.h8 + r.h9 + r.h10 + r.h11 + r.h12 + r.h13 + r.h14 + r.h15 + r.h16 + r.h17 + r.h18) ascending
                     join p in pMinCard on r.Id equals p.Id
                     select r).Distinct();      
 }
@@ -58,9 +62,6 @@
             <td>
                 @Html.DisplayFor(modelItem => item.h9)
             </td>
-            @*<td rowspan="2" style="font-size:.5em;" class="verticalText">
-               @String.Format("{0:MMM dd yyyy}", item.gDate)
-            </td>*@
         </tr>
         <tr>
             <td>

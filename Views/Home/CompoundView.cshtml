@@ -3,7 +3,7 @@
     
     var compound = (from r in Model.AllCards
                     from s in Model.AllCourse
-                    where r.ccID == s.cID && r.Name == "fooz" && r.Id != 1 && r.Id != 2 && r.Id != 31 && r.h18 != 0
+                    where r.ccID == s.cID && r.Id != 1 && r.Id != 2 && r.Id != 31 && r.h18 != 0
                     orderby r.ccID, (r.h1 + r.h2 + r.h3 + r.h4 + r.h5 + r.h6 + r.h7 + r.h8 + r.h9 + r.h10 + r.h11 + r.h12 + r.h13 + r.h14 + r.h15 + r.h16 + r.h17 + r.h18) ascending
                     select new { r.Name, s.cName, s.cTotPar, s.cSSE
                                , r.h1, r.h2, r.h3, r.h4, r.h5, r.h6, r.h7, r.h8, r.h9

@@ -5,11 +5,24 @@
                     from s in Model.AllCourse
                     where r.ccID == s.cID && r.Id != 1 && r.Id != 2 && r.Id != 31 && r.h18 != 0
                     orderby r.ccID, (r.h1 + r.h2 + r.h3 + r.h4 + r.h5 + r.h6 + r.h7 + r.h8 + r.h9 + r.h10 + r.h11 + r.h12 + r.h13 + r.h14 + r.h15 + r.h16 + r.h17 + r.h18) ascending
-                    select new { r.Name, s.cName, s.cTotPar, s.cSSE
+                    select new
+                    {
+                        r.Name,
+                        s.cName,
+                        s.cTotPar,
+                        s.cSSE,
+                        rSum = r.h1 + r.h2 + r.h3 + r.h4 + r.h5 + r.h6 + r.h7 + r.h8 + r.h9 + r.h10 + r.h11 + r.h12 + r.h13 + r.h14 + r.h15 + r.h16 + r.h17 + r.h18
                                , r.h1, r.h2, r.h3, r.h4, r.h5, r.h6, r.h7, r.h8, r.h9
                                , r.h10, r.h11, r.h12, r.h13, r.h14, r.h15, r.h16, r.h17, r.h18
                                , s.cdh1, s.cdh2, s.cdh3, s.cdh4, s.cdh5, s.cdh6, s.cdh7, s.cdh8, s.cdh9
                                , s.cdh10, s.cdh11, s.cdh12, s.cdh13, s.cdh14, s.cdh15, s.cdh16, s.cdh17, s.cdh18 });
+
+    var min = (from x in compound
+               group x by new { x.Name, x.cName } into grp
+               let MinC = grp.Min(r => r.rSum)
+               from x in grp
+               where x.rSum == MinC
+               select x);
                 
 }
 
@@ -41,12 +54,12 @@
 
     });
 </script>
-    @foreach (var courseName in compound.GroupBy( a => a.cName).ToList())
+    @foreach (var courseName in min.GroupBy( a => a.cName).ToList())
     {
         <div class="accordion" id="section1">@courseName.Key</div>
             <div class="container">
         <div class="content">
-        @foreach( var item in compound.Where(b => b.cName==@courseName.Key)){
+        @foreach( var item in min.Where(b => b.cName==@courseName.Key)){
             
         <table>
         <tr>

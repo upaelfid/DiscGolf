@@ -33,27 +33,29 @@
     {        background-color:#FFF;
     }
 </style>
+@section scripts{
 <script src="/Scripts/jquery.accordion.js" type="text/javascript"></script>
 	<script type="text/javascript">
-    $(document).ready(function() {
-        $.fn.slideFadeToggle = function(speed, easing, callback) {
-            return this.animate({opacity: 'toggle', height: 'toggle'}, speed, easing, callback);
-        };
-        //accordion
-        $('.accordion').accordion({
+	    $(document).ready(function () {
+	        $.fn.slideFadeToggle = function (speed, easing, callback) {
+	            return this.animate({ opacity: 'toggle', height: 'toggle' }, speed, easing, callback);
+	        };
+	        //accordion
+	        $('.accordion').accordion({
 
-            cookieName: 'accordion_nav',
-            speed: 'slow',
-            animateOpen: function (elem, opts) { //replace the standard slideUp with custom function
-                elem.next().stop(true, true).slideFadeToggle(opts.speed);
-            },
-            animateClose: function (elem, opts) { //replace the standard slideDown with custom function
-                elem.next().stop(true, true).slideFadeToggle(opts.speed);
-            }
-        });
+	            cookieName: 'accordion_nav',
+	            speed: 'slow',
+	            animateOpen: function (elem, opts) { //replace the standard slideUp with custom function
+	                elem.next().stop(true, true).slideFadeToggle(opts.speed);
+	            },
+	            animateClose: function (elem, opts) { //replace the standard slideDown with custom function
+	                elem.next().stop(true, true).slideFadeToggle(opts.speed);
+	            }
+	        });
 
-    });
+	    });
 </script>
+}
     @foreach (var courseName in min.GroupBy( a => a.cName).ToList())
     {
         <div class="accordion" id="section1">@courseName.Key</div>

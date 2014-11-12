@@ -463,12 +463,15 @@ fieldset {
     border-bottom:none;
     background-color:#dcdad5;
     margin-top:10px;
+    height:80px;
+    padding:45px 45px 0 45px;
 }
 .editor-field
 {
     border: 1px solid lightgray;
     margin-bottom:2px;
-    background-color:#e2e2e2;  
+    height:260px;
+
 }
 
 /*.text-box
@@ -858,6 +861,9 @@ x
       /* Use the Roboto font that is loaded in the <head> */
       font-family: 'Roboto',arial,sans-serif;
     }
+
+    .score{background-color:rgb(220, 218, 213);color:black;font-size:.3em;}
+    .hole{background-color:rgb(226, 226, 226);}
 /*Cool code taht puts text between a line*/
 /*h1 {
     overflow: hidden;

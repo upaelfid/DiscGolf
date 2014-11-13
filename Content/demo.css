@@ -9,7 +9,7 @@ body {
 	background-color: #f9f9f9;
 	font-family: Arial, Helvetica, Verdana;
 	font-size: 14px;
-	line-height: 22px;
+	/*line-height: 22px;*/
 	color: #333;
 	position: relative;
 	-webkit-text-size-adjust: none;
@@ -35,7 +35,7 @@ h4, h5, h6
 }
 p
 {
-	margin: 0 0 10px 0;
+	margin: 0 0 0 0;
 }
 
 pre

@@ -462,22 +462,23 @@ fieldset {
     border: 1px solid lightgray;
     border-bottom:none;
     background-color:#dcdad5;
-    margin-top:10px;
+    margin:10px 10px 0 10px;
     height:60px;
     padding:45px 45px 0 45px;
 }
 .editor-field
 {
+        margin:0 10px 0 10px;
     border: 1px solid lightgray;
     margin-bottom:2px;
     height:230px;
 
 }
 
-/*.text-box
+.text-box
 {
-    height:4em;
-}*/
+    font-size:3em;text-align:center; margin:80px 20px 0 20px;
+}
 
 label {
     display: block;
@@ -637,7 +638,7 @@ white-space: nowrap;
 *   Mobile Styles   *
 ********************/
 @media only screen and (max-width: 850px) {
-x
+
 
     /* header
     ----------------------------------------------------------*/

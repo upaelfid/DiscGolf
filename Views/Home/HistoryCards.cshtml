@@ -1,6 +1,10 @@
 ﻿@model IEnumerable<DiscGolf.Models.Card>
 @{
     ViewBag.Title = "History Page";
+
+    var oCards = (from r in Model
+                  orderby r.ccID, (r.h1 + r.h2 + r.h3 + r.h4 + r.h5 + r.h6 + r.h7 + r.h8 + r.h9 + r.h10 + r.h11 + r.h12 + r.h13 + r.h14 + r.h15 + r.h16 + r.h17 + r.h18) ascending
+                  select r);
 }
 <h1>TOP CARDS</h1>
 <style>
@@ -36,7 +40,7 @@
 </script>
 }
 
- @foreach (var courseName in Model.GroupBy(a => a.ccID).ToList())
+ @foreach (var courseName in oCards.GroupBy(a => a.ccID).ToList())
 {
      if(courseName.Key==0){
              <div class="accordion" id="section1">Unknown Course</div>}
@@ -48,7 +52,7 @@
      {<div class="accordion" id="section1">Hyland Orchard & Brewery</div>}
             <div class="container">
         <div class="content">
-        @foreach (var item in Model.Where(b => b.ccID == @courseName.Key))
+        @foreach (var item in oCards.Where(b => b.ccID == @courseName.Key))
         {
     <table>
         <tr>

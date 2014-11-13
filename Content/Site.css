@@ -463,14 +463,14 @@ fieldset {
     border-bottom:none;
     background-color:#dcdad5;
     margin-top:10px;
-    height:80px;
+    height:60px;
     padding:45px 45px 0 45px;
 }
 .editor-field
 {
     border: 1px solid lightgray;
     margin-bottom:2px;
-    height:260px;
+    height:230px;
 
 }
 
@@ -601,7 +601,7 @@ div select
     {
         border:1px solid lightgray;
 border-collapse:collapse;
-        border-radius:10px;
+        /*border-radius:10px;*/
         margin-left:5px;
         width:98%;
         margin-bottom:5px;

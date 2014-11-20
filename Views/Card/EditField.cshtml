@@ -21,8 +21,6 @@
     ViewBag.Hole17 = "HOLE 17";
     ViewBag.Hole18 = "HOLE 18";
 
-
-    SelectList strokes = new SelectList(new[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17" });
 }
 
 
@@ -50,10 +48,8 @@
                 <strong>@ViewBag.Hole1</strong>
             </div>
             <div class="editor-field">
-                @* @Html.EditorFor(model => model.h1, new { @type = "tel", @onchange="this.form.submit();" })*@
                 <input name="h1"  class="text-box single-line" id="h1" type="tel" data-val-required="The h1 field is required."
                     data-val="true" data-val-number="The field h1 must be a number." value="" onchange="this.form.submit();" autofocus="autofocus"></input>
-                @* @Html.DropDownListFor(model =>model.h1, strokes, new { onchange="this.form.submit();" })*@
                 @Html.ValidationMessageFor(model => model.h1)
             </div>
         }
@@ -64,7 +60,6 @@
                 <strong>@ViewBag.Hole2</strong>
             </div>
             <div class="editor-field">
-                @* @Html.DropDownListFor(model => model.h2, strokes, new { onchange="this.form.submit();" })*@
                 <input name="h2"  class="text-box single-line" id="h2" type="tel" data-val-required="The h2 field is required."
                     data-val="true" data-val-number="The field h2 must be a number." value="" onchange="this.form.submit();" autofocus="autofocus"></input>
                 @Html.ValidationMessageFor(model => model.h2)
@@ -77,7 +72,6 @@
                 <strong>@ViewBag.Hole3</strong>
             </div>
             <div class="editor-field">
-                @* @Html.DropDownListFor(model => model.h3, strokes, new { onchange="this.form.submit();" })*@
                 <input name="h3"  class="text-box single-line" id="h3" type="tel" data-val-required="The h3 field is required."
                     data-val="true" data-val-number="The field h3 must be a number." value="" onchange="this.form.submit();" autofocus="autofocus"></input>
                 @Html.ValidationMessageFor(model => model.h3)
@@ -90,7 +84,6 @@
                 <strong>@ViewBag.Hole4</strong>
             </div>
             <div class="editor-field">
-                @*@Html.DropDownListFor(model => model.h4, strokes, new { onchange="this.form.submit();" })*@
                 <input name="h4"  class="text-box single-line" id="h4" type="tel" data-val-required="The h4 field is required."
                     data-val="true" data-val-number="The field h4 must be a number." value="" onchange="this.form.submit();" autofocus="autofocus"></input>
                 @Html.ValidationMessageFor(model => model.h4)
@@ -103,7 +96,6 @@
                 <strong>@ViewBag.Hole5</strong>
             </div>
             <div class="editor-field">
-                @* @Html.DropDownListFor(model => model.h5, strokes, new { onchange="this.form.submit();" })*@
                 <input name="h5"  class="text-box single-line" id="h5" type="tel" data-val-required="The h5 field is required."
                     data-val="true" data-val-number="The field h5 must be a number." value="" onchange="this.form.submit();" autofocus="autofocus"></input>
                 @Html.ValidationMessageFor(model => model.h5)
@@ -116,7 +108,6 @@
                 <strong>@ViewBag.Hole6</strong>
             </div>
             <div class="editor-field">
-                @*@Html.DropDownListFor(model => model.h6, strokes, new { onchange="this.form.submit();" })*@
                 <input name="h6"  class="text-box single-line" id="h6" type="tel" data-val-required="The h6 field is required."
                     data-val="true" data-val-number="The field h6 must be a number." value="" onchange="this.form.submit();" autofocus="autofocus"></input>
                 @Html.ValidationMessageFor(model => model.h6)
@@ -129,7 +120,6 @@
                 <strong>@ViewBag.Hole7</strong>
             </div>
             <div class="editor-field">
-                @*@Html.DropDownListFor(model => model.h7, strokes, new { onchange="this.form.submit();" })*@
                 <input name="h7"  class="text-box single-line" id="h7" type="tel" data-val-required="The h7 field is required."
                     data-val="true" data-val-number="The field h7 must be a number." value="" onchange="this.form.submit();" autofocus="autofocus"></input>
                 @Html.ValidationMessageFor(model => model.h7)
@@ -142,7 +132,6 @@
                 <strong>@ViewBag.Hole8</strong>
             </div>
             <div class="editor-field">
-                @*@Html.DropDownListFor(model => model.h8, strokes, new { onchange="this.form.submit();" })*@
                 <input name="h8"  class="text-box single-line" id="h8" type="tel" data-val-required="The h8 field is required."
                     data-val="true" data-val-number="The field h8 must be a number." value="" onchange="this.form.submit();" autofocus="autofocus"></input>
                 @Html.ValidationMessageFor(model => model.h8)
@@ -155,7 +144,6 @@
                 <strong>@ViewBag.Hole9</strong>
             </div>
             <div class="editor-field">
-                @*@Html.DropDownListFor(model => model.h9, strokes, new { onchange="this.form.submit();" })*@
                 <input name="h9"  class="text-box single-line" id="h9" type="tel" data-val-required="The h9 field is required."
                     data-val="true" data-val-number="The field h9 must be a number." value="" onchange="this.form.submit();" autofocus="autofocus"></input>
                 @Html.ValidationMessageFor(model => model.h9)
@@ -168,7 +156,6 @@
                 <strong>@ViewBag.Hole10</strong>
             </div>
             <div class="editor-field">
-                @* @Html.DropDownListFor(model => model.h10, strokes, new { onchange="this.form.submit();" })*@
                 <input name="h10"  class="text-box single-line" id="h10" type="tel" data-val-required="The h10 field is required."
                     data-val="true" data-val-number="The field h10 must be a number." value="" onchange="this.form.submit();" autofocus="autofocus"></input>
                 @Html.ValidationMessageFor(model => model.h10)
@@ -181,7 +168,6 @@
                 <strong>@ViewBag.Hole11</strong>
             </div>
             <div class="editor-field">
-                @*@Html.DropDownListFor(model => model.h11, strokes, new { onchange="this.form.submit();" })*@
                 <input name="h11"  class="text-box single-line" id="h11" type="tel" data-val-required="The h11 field is required."
                     data-val="true" data-val-number="The field h11 must be a number." value="" onchange="this.form.submit();" autofocus="autofocus"></input>
                 @Html.ValidationMessageFor(model => model.h11)
@@ -194,7 +180,6 @@
                 <strong>@ViewBag.Hole12</strong>
             </div>
             <div class="editor-field">
-                @* @Html.DropDownListFor(model => model.h12, strokes, new { onchange="this.form.submit();" })*@
                 <input name="h12"  class="text-box single-line" id="h12" type="tel" data-val-required="The h12 field is required."
                     data-val="true" data-val-number="The field h12 must be a number." value="" onchange="this.form.submit();" autofocus="autofocus"></input>
                 @Html.ValidationMessageFor(model => model.h12)
@@ -207,7 +192,6 @@
                 <strong>@ViewBag.Hole13</strong>
             </div>
             <div class="editor-field">
-                @* @Html.DropDownListFor(model => model.h13, strokes, new { onchange="this.form.submit();" })*@
                 <input name="h13"  class="text-box single-line" id="h13" type="tel" data-val-required="The h13 field is required."
                     data-val="true" data-val-number="The field h13 must be a number." value="" onchange="this.form.submit();" autofocus="autofocus"></input>
                 @Html.ValidationMessageFor(model => model.h13)
@@ -220,7 +204,6 @@
                 <strong>@ViewBag.Hole14</strong>
             </div>
             <div class="editor-field">
-                @*@Html.DropDownListFor(model => model.h14, strokes, new { onchange="this.form.submit();" })*@
                 <input name="h14"  class="text-box single-line" id="h14" type="tel" data-val-required="The h14 field is required."
                     data-val="true" data-val-number="The field h14 must be a number." value="" onchange="this.form.submit();" autofocus="autofocus"></input>
                 @Html.ValidationMessageFor(model => model.h14)
@@ -234,7 +217,6 @@
                 <strong>@ViewBag.Hole15</strong>
             </div>
             <div class="editor-field">
-                @*@Html.DropDownListFor(model => model.h15, strokes, new { onchange="this.form.submit();" })*@
                 <input name="h15"  class="text-box single-line" id="h15" type="tel" data-val-required="The h15 field is required."
                     data-val="true" data-val-number="The field h15 must be a number." value="" onchange="this.form.submit();" autofocus="autofocus"></input>
                 @Html.ValidationMessageFor(model => model.h15)
@@ -247,7 +229,6 @@
                 <strong>@ViewBag.Hole16</strong>
             </div>
             <div class="editor-field">
-                @*@Html.DropDownListFor(model => model.h16, strokes, new { onchange="this.form.submit();" })*@
                 <input name="h16"  class="text-box single-line" id="h16" type="tel" data-val-required="The h16 field is required."
                     data-val="true" data-val-number="The field h16 must be a number." value="" onchange="this.form.submit();" autofocus="autofocus"></input>
                 @Html.ValidationMessageFor(model => model.h16)
@@ -261,7 +242,6 @@
                 <strong>@ViewBag.Hole17</strong>
             </div>
             <div class="editor-field">
-                @*@Html.DropDownListFor(model => model.h17, strokes, new { onchange="this.form.submit();" })*@
                 <input name="h17"  class="text-box single-line" id="h17" type="tel" data-val-required="The h17 field is required."
                     data-val="true" data-val-number="The field h17 must be a number." value="" onchange="this.form.submit();" autofocus="autofocus"></input>
                 @Html.ValidationMessageFor(model => model.h17)
@@ -275,7 +255,6 @@
                 <strong>@ViewBag.Hole18</strong>
             </div>
             <div class="editor-field">
-                @*@Html.DropDownListFor(model => model.h18, strokes, new { onchange="this.form.submit();" })*@
                 <input name="h18"  class="text-box single-line" id="h18" type="tel" data-val-required="The h18 field is required."
                     data-val="true" data-val-number="The field h18 must be a number." value="" onchange="this.form.submit();" autofocus="autofocus"></input>
                 @Html.ValidationMessageFor(model => model.h18)

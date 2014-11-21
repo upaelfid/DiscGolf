@@ -1,8 +1,8 @@
 ﻿@model DiscGolf.Models.Stats
 
 @{
-    ViewBag.Title = "Stats";
+    ViewBag.Title = User.Identity.Name +" Stats";
 }
 
-<h2>Stats</h2>
+<h2>@ViewBag.Title</h2>
 <img src='@Url.Action("Graph")'  />

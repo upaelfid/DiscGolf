@@ -57,7 +57,10 @@
                       [ @(string.Join(", ", (int[])ViewBag.series))]
     	            ]
     	        }, {
-    	            low: 0
+    	            low: 0,
+					  axisX: {
+    offset: 60
+  }
     	        });
 
     	        // Let's put a sequence number aside so we can use it in the event callbacks
@@ -174,7 +177,7 @@
 
 <h2>@ViewBag.Title</h2>
 @*<img src='@Url.Action("Graph")'  />*@
-<div class="ct-chart ct-perfect-fourth"></div>
+<div class="ct-chart ct-minor-seventh"></div>
 @*@foreach(var s in avgC)
 {
  <table>

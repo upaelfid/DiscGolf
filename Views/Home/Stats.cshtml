@@ -46,7 +46,7 @@
 
 }
 @section scriptsh{
-    <script src="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <script src="/Scripts/chartist.min.js"></script>
     <script type="text/javascript">
     	    $(document).ready(function () {
 
@@ -57,7 +57,14 @@
                       [ @(string.Join(", ", (int[])ViewBag.series))]
     	            ]
     	        }, {
-    	            low: 0
+    	            low: 0,
+    	            axisX: {
+    	                offset: 60
+    	            },
+    	            classNames: {
+    	        label: 'ct-label ct-vertical'
+    	            },
+                    chartPadding:10
     	        });
 
     	        // Let's put a sequence number aside so we can use it in the event callbacks

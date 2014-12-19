@@ -24,42 +24,96 @@
                 @(@item.h1 + @item.h2 + @item.h3 + @item.h4 + @item.h5 + @item.h6 + @item.h7 + @item.h8 +
             @item.h9 + @item.h10 + +@item.h11 + @item.h12 + @item.h13 + @item.h14 + @item.h15 + @item.h16 + @item.h17 + @item.h18)
             </td>
-            <td>
+                       @if (item.h1 < 3 && item.h1 !=0) { 
+            <td class="birdie">
             <div class="score"><p >HOLE 1</p></div>
                 @Html.DisplayFor(modelItem => item.h1)
             </td>
-            <td >
+                }
+                      else{<td class="par">
+            <div class="score"><p >HOLE 1</p></div>
+                @Html.DisplayFor(modelItem => item.h1)
+            </td>}
+                       @if (item.h2 < 3 && item.h2 !=0) { 
+            <td class="birdie">
             <div class="score"><p >HOLE 2</p></div>
                 @Html.DisplayFor(modelItem => item.h2)
             </td>
-            <td >
+                }
+                      else{<td class="par">
+            <div class="score"><p >HOLE 2</p></div>
+                @Html.DisplayFor(modelItem => item.h2)
+            </td>}
+                       @if (item.h3 < 3 && item.h3 !=0) { 
+            <td class="birdie">
             <div class="score"><p >HOLE 3</p></div>
                 @Html.DisplayFor(modelItem => item.h3)
             </td>
-            <td>
+                }
+                      else{<td class="par">
+            <div class="score"><p >HOLE 3</p></div>
+                @Html.DisplayFor(modelItem => item.h3)
+            </td>}
+                       @if (item.h4 < 3 && item.h4 !=0) { 
+            <td class="birdie">
             <div class="score"><p >HOLE 4</p></div>
                 @Html.DisplayFor(modelItem => item.h4)
             </td>
-            <td>
+                }
+                      else{<td class="par">
+            <div class="score"><p >HOLE 4</p></div>
+                @Html.DisplayFor(modelItem => item.h4)
+            </td>}
+                       @if (item.h5 < 3 && item.h5 !=0) { 
+            <td class="birdie">
             <div class="score"><p >HOLE 5</p></div>
                 @Html.DisplayFor(modelItem => item.h5)
             </td>
-            <td >
+                }
+                      else{<td class="par">
+            <div class="score"><p >HOLE 5</p></div>
+                @Html.DisplayFor(modelItem => item.h5)
+            </td>}
+                       @if (item.h6 < 3 && item.h6 !=0) { 
+            <td class="birdie">
             <div class="score"><p >HOLE 6</p></div>
                 @Html.DisplayFor(modelItem => item.h6)
             </td>
-            <td>
+                }
+                      else{<td class="par">
+            <div class="score"><p >HOLE 6</p></div>
+                @Html.DisplayFor(modelItem => item.h6)
+            </td>}
+                       @if (item.h7 < 3 && item.h7 !=0) { 
+            <td class="birdie">
             <div class="score"><p >HOLE 7</p></div>
                 @Html.DisplayFor(modelItem => item.h7)
             </td>
-            <td>
+                }
+                      else{<td class="par">
+            <div class="score"><p >HOLE 7</p></div>
+                @Html.DisplayFor(modelItem => item.h7)
+            </td>}
+                       @if (item.h8 < 3 && item.h8 !=0) { 
+            <td class="birdie">
             <div class="score"><p >HOLE 8</p></div>
                 @Html.DisplayFor(modelItem => item.h8)
             </td>
-            <td >
+                }
+                      else{<td class="par">
+            <div class="score"><p >HOLE 8</p></div>
+                @Html.DisplayFor(modelItem => item.h8)
+            </td>}
+                       @if (item.h9 < 3 && item.h9 !=0) { 
+            <td class="birdie">
             <div class="score"><p >HOLE 9</p></div>
                 @Html.DisplayFor(modelItem => item.h9)
             </td>
+                }
+                      else{<td class="par">
+            <div class="score"><p >HOLE 9</p></div>
+                @Html.DisplayFor(modelItem => item.h9)
+            </td>}
             <td  class="hole" rowspan="2">
             <div></div>
                &nbsp;
@@ -67,42 +121,96 @@
 
         </tr>
         <tr>
-            <td >
+                       @if (item.h10 < 3 && item.h10 !=0) { 
+            <td class="birdie">
             <div class="score"><p >HOLE 10</p></div>
                 @Html.DisplayFor(modelItem => item.h10)
             </td>
-            <td >
+                }
+                      else{<td class="par">
+            <div class="score"><p >HOLE 10</p></div>
+                @Html.DisplayFor(modelItem => item.h10)
+            </td>}
+                       @if (item.h11 < 3 && item.h11 !=0) { 
+            <td class="birdie">
             <div class="score"><p >HOLE 11</p></div>
                 @Html.DisplayFor(modelItem => item.h11)
             </td>
-            <td>
+                }
+                      else{<td class="par">
+            <div class="score"><p >HOLE 11</p></div>
+                @Html.DisplayFor(modelItem => item.h11)
+            </td>}
+                       @if (item.h12 < 3 && item.h12 !=0) { 
+            <td class="birdie">
             <div class="score"><p >HOLE 12</p></div>
                 @Html.DisplayFor(modelItem => item.h12)
             </td>
-            <td >
+                }
+                      else{<td class="par">
+            <div class="score"><p >HOLE 12</p></div>
+                @Html.DisplayFor(modelItem => item.h12)
+            </td>}
+                       @if (item.h13 < 3 && item.h13 !=0) { 
+            <td class="birdie">
             <div class="score"><p >HOLE 13</p></div>
                 @Html.DisplayFor(modelItem => item.h13)
             </td>
-            <td >
+                }
+                      else{<td class="par">
+            <div class="score"><p >HOLE 13</p></div>
+                @Html.DisplayFor(modelItem => item.h13)
+            </td>}
+                       @if (item.h14 < 3 && item.h14 !=0) { 
+            <td class="birdie">
             <div class="score"><p >HOLE 14</p></div>
                 @Html.DisplayFor(modelItem => item.h14)
             </td>
-            <td >
+                }
+                      else{<td class="par">
+            <div class="score"><p >HOLE 14</p></div>
+                @Html.DisplayFor(modelItem => item.h14)
+            </td>}
+                       @if (item.h15 < 3 && item.h15 !=0) { 
+            <td class="birdie">
             <div class="score"><p >HOLE 15</p></div>
                 @Html.DisplayFor(modelItem => item.h15)
             </td>
-             <td >
+                }
+                      else{<td class="par">
+            <div class="score"><p >HOLE 15</p></div>
+                @Html.DisplayFor(modelItem => item.h15)
+            </td>}
+                       @if (item.h16 < 3 && item.h16 !=0) { 
+            <td class="birdie">
             <div class="score"><p >HOLE 16</p></div>
                 @Html.DisplayFor(modelItem => item.h16)
             </td>
-            <td>
+                }
+                      else{<td class="par">
+            <div class="score"><p >HOLE 16</p></div>
+                @Html.DisplayFor(modelItem => item.h16)
+            </td>}
+                       @if (item.h17 < 3 && item.h17 !=0) { 
+            <td class="birdie">
             <div class="score"><p >HOLE 17</p></div>
                 @Html.DisplayFor(modelItem => item.h17)
             </td>
-            <td >
+                }
+                      else{<td class="par">
+            <div class="score"><p >HOLE 17</p></div>
+                @Html.DisplayFor(modelItem => item.h17)
+            </td>}
+                       @if (item.h18 < 3 && item.h18 !=0) { 
+            <td class="birdie">
             <div class="score"><p >HOLE 18</p></div>
                 @Html.DisplayFor(modelItem => item.h18)
             </td>
+                }
+                      else{<td class="par">
+            <div class="score"><p >HOLE 18</p></div>
+                @Html.DisplayFor(modelItem => item.h18)
+            </td>}
         </tr>
             @if (User.Identity.Name == item.Name && item.h18 == 0)
             {    <td colspan="11">@Html.ActionLink("UPDATE", "EditField", "Card", new { id = item.Id }, new { @class = "uk-width-1-1 uk-button uk-button-primary", @style = "float:center; width:100%;" })

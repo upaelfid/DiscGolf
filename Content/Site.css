@@ -864,6 +864,9 @@ white-space: nowrap;
     }
 
     .score{background-color:rgb(220, 218, 213);color:black;font-size:.3em;}
+    td.birdie{background-color:yellow;border:1px solid lightgray;border-collapse:collapse;}
+
+
     .hole{background-color:rgb(226, 226, 226);}
 /*Cool code taht puts text between a line*/
 /*h1 {

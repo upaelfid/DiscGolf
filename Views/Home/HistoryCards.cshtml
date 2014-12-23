@@ -39,7 +39,7 @@
     });
 </script>
 }
-
+<div class="uk-panel-box">
  @foreach (var courseName in oCards.GroupBy(a => a.ccID).ToList())
 {
      if(courseName.Key==0){
@@ -127,4 +127,6 @@
         }
         </div>
         </div>
+     
 }
+</div>

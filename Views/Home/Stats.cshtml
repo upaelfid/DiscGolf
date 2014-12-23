@@ -15,20 +15,22 @@
                   where r.Id != 1 && r.Id != 2 && r.Id != 31 && r.h18 != 0 && User.Identity.Name == r.Name
                   select new { Name = r.Name, pSum = r.h1 + r.h2 + r.h3 + r.h4 + r.h5 + r.h6 + r.h7 + r.h8 + r.h9 + r.h10 + r.h11 + r.h12 + r.h13 + r.h14 + r.h15 + r.h16 + r.h17 + r.h18, r.Id, r.gDate }).Distinct().ToList();
 
-            
+     //Name, Course, maxC       
     var maxC = (from r in players
-             group r by new { r.Name, r.Id, r.ccID } into grp
+             group r by new { r.Name,  r.ccID } into grp
              let MaxC = grp.Max(r => r.pSum)
              from x in grp
              where x.pSum == MaxC
              select x).ToList();
-
-    var avgC = (from r in players
-                group r by new { r.Name, r.Id, r.ccID } into grp
-                let MaxC = grp.Average(r => r.pSum)
+    //Name, Course, minC
+    var minC = (from r in players
+                group r by new { r.Name,  r.ccID } into grp
+                let MinC = grp.Min(r => r.pSum)
                 from x in grp
-                where x.pSum == MaxC
+                where x.pSum == MinC
                 select x).ToList();
+
+
 
 
     List<String> _xval = new List<String> { };
@@ -181,7 +183,9 @@
 
 <h2>@ViewBag.Title</h2>
 @*<img src='@Url.Action("Graph")'  />*@
+
 <div class="ct-chart ct-perfect-fourth"></div>
+
 @*@foreach(var s in avgC)
 {
  <table>

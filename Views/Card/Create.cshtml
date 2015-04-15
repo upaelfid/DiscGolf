@@ -10,6 +10,16 @@
             new SelectListItem { Selected = false, Text = "Hyland Orchard & Brewery", Value = "4251"},
         }, "Value", "Text",1);
 }
+<style>
+    .autocomplete-suggestions { border: 1px solid #999; background: #FFF; cursor: default; overflow: auto; -webkit-box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); -moz-box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); }
+.autocomplete-suggestion { padding: 2px 5px; white-space: nowrap; overflow: hidden; }
+.autocomplete-no-suggestion { padding: 2px 5px;}
+.autocomplete-selected { background: #F0F0F0; }
+.autocomplete-suggestions strong { font-weight: bold; color: #000; }
+.autocomplete-group { padding: 2px 5px; }
+.autocomplete-group strong { font-weight: bold; font-size: 16px; color: #000; display: block; border-bottom: 1px solid #000; }
+
+</style>
  <h3>&nbsp;</h3>
 @using (Html.BeginForm()) {
     @Html.ValidationSummary(true)
@@ -24,11 +34,22 @@
             @Html.HiddenFor(model => model.Name)
             @Html.ValidationMessageFor(model => model.Name)
         </div>
+@*                <p>Type some english:</p>
+        <div style="position: relative; height: 80px;">
+            <input type="text" name="country" id="autocomplete-ajax" />
+        </div>*@
+        <div id="selction-ajax">
+        <script></script>
+        </div>
         <h3>Select a Course</h3>
+        <i style="font-size:10px;">start typing the name of your town to view available courses near you</i>
                 <div  style="margin-top:10px;"> 
 @*                @Html.DropDownListFor(model => model.ccID, new SelectList(Model., "OrderTemplateId", "OrderTemplateName", 1), "Please select an order template")
                 @Html.DropDownListFor(n => n.SelectedOrderId, new SelectList(Model.OrderTemplates, "OrderTemplateId", "OrderTemplateName", 1), "Please select an order template")*@
-             @Html.DropDownListFor(model =>model.ccID , courses)
+@*             @Html.DropDownListFor(model =>model.ccID , courses)*@
+
+            <input type="text" name="country" id="autocomplete-ajax" />
+            @Html.HiddenFor(model=> model.ccID, new{id="selection-ajax"})
             @Html.ValidationMessageFor(model => model.ccID)
         </div>
         <div  style="visibility:hidden;"> 
@@ -164,4 +185,5 @@
 }
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/autocomplete")
 }

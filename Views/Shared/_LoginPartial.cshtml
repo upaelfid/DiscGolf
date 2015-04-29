@@ -4,7 +4,8 @@
 
     </text>
         <ul style="display:inline-block;">
-         <li class="uk-width-1-1 uk-button uk-button-primary" style="color:white;">@Html.ActionLink("Refresh", "Index", "Home")</li>
+         <li class="uk-width-1-1 uk-button uk-button-primary">@Html.ActionLink("Refresh", "Index", "Home", null, 
+     new { @style="color:white;" })</li>
     </ul>
 } else {
     <ul style="display:block;">

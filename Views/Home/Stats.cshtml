@@ -2,33 +2,32 @@
 
 @{
     ViewBag.Title = User.Identity.Name +" Stats";
+    
+    //Start animated chart data collection 
+    var scores = (from r in Model.myStats
+                  where r.Id != 1 && r.Id != 2 && r.Id != 31 && r.h18 != 0 && User.Identity.Name == r.Name
+                  where r.Id != 1 && r.Id != 2 && r.Id != 31 && r.h18 != 0 && User.Identity.Name == r.Name && r.ccID == 602
+                  select new { Name = r.Name, pSum = r.h1 + r.h2 + r.h3 + r.h4 + r.h5 + r.h6 + r.h7 + r.h8 + r.h9 + r.h10 + r.h11 + r.h12 + r.h13 + r.h14 + r.h15 + r.h16 + r.h17 + r.h18, r.Id, r.gDate }).Distinct().ToList();
 
-    //var stats =(from m in Model.myStats
-    //        select m);
+    List<String> _xval = new List<String> { };
+    foreach (var x in scores)
+    {
+        _xval.Add(String.Format("{0:MM dd yyyy}", x.gDate));
+    }
+    ViewBag.labels = _xval.ToArray();
+    List<int> _yval = new List<int> { };
 
-
-    //var players = (from r in Model.myStats
-    //               where r.Id != 1 && r.Id != 2 && r.Id != 31 && r.h18 != 0
-    //               select new { Name = r.Name, pSum = r.h1 + r.h2 + r.h3 + r.h4 + r.h5 + r.h6 + r.h7 + r.h8 + r.h9 + r.h10 + r.h11 + r.h12 + r.h13 + r.h14 + r.h15 + r.h16 + r.h17 + r.h18, r.Id, r.ccID }).Distinct().ToList();
-
-    //var scores = (from r in Model.myStats
-    //              where r.Id != 1 && r.Id != 2 && r.Id != 31 && r.h18 != 0 && r.ccID == 602
-    //              select new { Name = r.Name, pSum = r.h1 + r.h2 + r.h3 + r.h4 + r.h5 + r.h6 + r.h7 + r.h8 + r.h9 + r.h10 + r.h11 + r.h12 + r.h13 + r.h14 + r.h15 + r.h16 + r.h17 + r.h18, r.Id, r.gDate }).Distinct().ToList();
-
-     //Name, Course, maxC       
-    //var maxC = (from r in players
-    //         group r by new { r.Name,  r.ccID } into grp
-    //         let MaxC = grp.Max(r => r.pSum)
-    //         from x in grp
-    //         where x.pSum == MaxC
-    //         select x).ToList();
-    //Name, Course, minC
-    //var minC = (from r in players
-    //            group r by new { r.Name,  r.ccID } into grp
-    //            let MinC = grp.Min(r => r.pSum)
-    //            from x in grp
-    //            where x.pSum == MinC
-    //            select x).ToList();
+    foreach (var x in scores)
+        {
+            _yval.Add(x.pSum);
+        }
+    ViewBag.series = _yval.ToArray();   
+    //End animated chart data collection
+    
+    //Start for Bar Chart Data. This should be more concise and pretty. 
+    //'var allh1' separates data for hole one into par, birdie and over-par. 
+    //'var one' adds the number or par, birdies and over- pars
+    //'var t' does a table union for all holes
     var allh1 = (from s in Model.myStats
                  where s.Id != 1 && s.Id != 2 && s.Id != 31 && s.h18 != 0 && s.ccID == 602
                  select new { s.ccID, hole = "h1", par = s.h1 == 3 ? 1 : 0, birdie = s.h1 < 3 ? 1 : 0, over = s.h1 > 3 ? 1 : 0 }).ToList();
@@ -193,12 +192,7 @@
 
     var t = (from o in one select o)
     .Union(two).Union(three).Union(four).Union(five).Union(six).Union(seven).Union(eight).Union(nine).Union(ten).Union(eleven).Union(twelve).Union(thirteen).Union(fourteen).Union(fifteen).Union(sixteen).Union(seventeen).Union(eighteen);
-    //				  t.Dump();
-
-    var birdie = (from b in t select new { b.birds }).ToList();
-
-
-
+    
     List<int> _birdies = new List<int> { };
     List<int> _pars = new List<int> { };
     List<int> _overs = new List<int> { };
@@ -216,67 +210,43 @@
     }
     ViewBag.birds = _birdies.ToArray();
     ViewBag.pars = _pars.ToArray();
-    ViewBag.overs = _overs.ToArray();     
+    ViewBag.overs = _overs.ToArray();
+    
+    //end of 'Bar Chart'    
 
 }
 @section scriptsh{
-    <script src="/Scripts/chartist.min.js"></script>
+    <script type="text/javascript" src="/Scripts/chartist.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-
-            var chart =
-        new Chartist.Bar('.ct-chart', {
+        new Chartist.Bar('#bar-chart', {
             labels: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'h7', 'h8', 'h9', 'h10', 'h11', 'h12', 'h13', 'h14', 'h15', 'h16', 'h17', 'h18'],
             series: [
-                [ @(string.Join(", ", (int[])ViewBag.birds))],
+                [ @(string.Join(", ", (int[])ViewBag.overs))],
                 [ @(string.Join(", ", (int[])ViewBag.pars))],
-                [ @(string.Join(", ", (int[])ViewBag.overs))]
-
+                [ @(string.Join(", ", (int[])ViewBag.birds))]
             ]
         }, {
-            // Default mobile configuration
             stackBars: true,
-            axisX: {
-                labelInterpolationFnc: function (value) {
-                    return value.split(/\s+/).map(function (word) {
-                        return word[0];
-                    }).join('');
-                }
-            },
             axisY: {
-                offset: 60
+                labelInterpolationFnc: function (value) {
+                    return (value / 1);
+                }
             }
-        }, [
-  // Options override for media > 400px
-  ['screen and (min-width: 400px)', {
-      reverseData: true,
-      horizontalBars: true,
-      axisX: {
-          labelInterpolationFnc: Chartist.noop
-      },
-      axisY: {
-          offset: 60
-      }
-  }],
-  // Options override for media > 800px
-  ['screen and (min-width: 800px)', {
-      stackBars: false,
-      seriesBarDistance: 20
-  }],
-  // Options override for media > 1000px
-  ['screen and (min-width: 1000px)', {
-      reverseData: false,
-      horizontalBars: false,
-      seriesBarDistance: 5
-  }]
-        ]);
+        }).on('draw', function (data) {
+            if (data.type === 'bar') {
+                data.element.attr({
+                    style: 'stroke-width: 30px'
+                });
+            }
+        });
         });
         </script>
-    @*<script type="text/javascript">
+    <script type="text/javascript">
     // Start animated graph
     	    $(document).ready(function () {
 
-    	        var chart = new Chartist.Line('.ct-chart', {
+    	        var chart = new Chartist.Line('#animated-chart', {
     	            labels: [@Html.Raw("'" + string.Join("', '", (string[])ViewBag.labels) + "'")],
     	            series: [
 
@@ -402,35 +372,14 @@
 
 
     	    });
-</script>*@	
+</script>
 
 }
 
 <h2>@ViewBag.Title</h2>
 @*<img src='@Url.Action("Graph")'  />*@
 
-<div class="ct-chart ct-perfect-fourth"></div>
+<div class="ct-chart ct-perfect-fourth" id="animated-chart"></div>
+<h2>Northampton Hospital Hill Difficulty</h2>
+<div class="ct-chart ct-perfect-fourth" id="bar-chart"></div>
 
-@*@foreach(var s in avgC)
-{
- <table>
-        <tr class="hole">
-            <th colspan="11" style="margin-top: 4em;">
-                @s.Name, @ViewBag.Chartist
-            </th>
-        </tr>
-        <tr>
-            <td rowspan="2" style="width: 20%; font-weight: bolder; font-size: 3em;"  class="hole">
-            @s.pSum
-            </td>
-              <td rowspan="2" style="width: 20%; font-weight: bolder; font-size: 3em;"  class="hole">
-               @s.ccID
-            </td>
-            <td rowspan="2" style="width: 20%; font-weight: bolder; font-size: 3em;"  class="hole">
-@s.Id
-            </td>
-
-            
-        </tr>
-</table>
-}*@

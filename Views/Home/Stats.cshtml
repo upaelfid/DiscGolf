@@ -1,5 +1,8 @@
 ﻿@model DiscGolf.Models.Stats
-
+<style>
+.ct-chart .ct-label, .ct-chart .ct-label.ct-horizontal {text-align:center !important; font-size:8px !important;}
+.ct-chart .ct-series.ct-series-b .ct-bar{stroke: blue;}
+.ct-chart .ct-series.ct-series-c .ct-bar{stroke: yellow;}</style>
 @{
     ViewBag.Title = User.Identity.Name +" Stats";
     

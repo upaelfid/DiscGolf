@@ -216,7 +216,7 @@
 
 }
 @section scriptsh{
-    <script type="text/javascript" src="/Scripts/chartist.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
         new Chartist.Bar('#bar-chart', {
@@ -246,7 +246,7 @@
     // Start animated graph
     	    $(document).ready(function () {
 
-    	        var chart = new Chartist.Line('#animated-chart', {
+    	         new Chartist.Line('#animated-chart', {
     	            labels: [@Html.Raw("'" + string.Join("', '", (string[])ViewBag.labels) + "'")],
     	            series: [
 

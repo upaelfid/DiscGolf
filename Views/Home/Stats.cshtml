@@ -1,14 +1,14 @@
 ﻿@model DiscGolf.Models.Stats
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
 <style>
 .ct-chart .ct-label, .ct-chart .ct-label.ct-horizontal {text-align:center !important; font-size:8px !important;}
-.ct-chart .ct-series.ct-series-b .ct-bar{stroke: blue;}
+.ct-chart .ct-series.ct-series-b .ct-bar{stroke: #007acc;}
 .ct-chart .ct-series.ct-series-c .ct-bar{stroke: yellow;}</style>
 @{
     ViewBag.Title = User.Identity.Name +" Stats";
     
     //Start animated chart data collection 
     var scores = (from r in Model.myStats
-                  where r.Id != 1 && r.Id != 2 && r.Id != 31 && r.h18 != 0 && User.Identity.Name == r.Name
                   where r.Id != 1 && r.Id != 2 && r.Id != 31 && r.h18 != 0 && User.Identity.Name == r.Name && r.ccID == 602
                   select new { Name = r.Name, pSum = r.h1 + r.h2 + r.h3 + r.h4 + r.h5 + r.h6 + r.h7 + r.h8 + r.h9 + r.h10 + r.h11 + r.h12 + r.h13 + r.h14 + r.h15 + r.h16 + r.h17 + r.h18, r.Id, r.gDate }).Distinct().ToList();
 
@@ -243,12 +243,8 @@
                 });
             }
         });
-        });
-        </script>
-    <script type="text/javascript">
-    // Start animated graph
-    	    $(document).ready(function () {
 
+    	        // Start animated graph
     	         new Chartist.Line('#animated-chart', {
     	            labels: [@Html.Raw("'" + string.Join("', '", (string[])ViewBag.labels) + "'")],
     	            series: [
@@ -271,108 +267,7 @@
                   delays = 80,
                   durations = 500;
 
-    	        // Once the chart is fully created we reset the sequence
-    	        chart.on('created', function () {
-    	            seq = 0;
-    	        });
-
-    	        // On each drawn element by Chartist we use the Chartist.Svg API to trigger SMIL animations
-    	        chart.on('draw', function (data) {
-    	            seq++;
-
-    	            if (data.type === 'line') {
-    	                // If the drawn element is a line we do a simple opacity fade in. This could also be achieved using CSS3 animations.
-    	                data.element.animate({
-    	                    opacity: {
-    	                        // The delay when we like to start the animation
-    	                        begin: seq * delays + 1000,
-    	                        // Duration of the animation
-    	                        dur: durations,
-    	                        // The value where the animation should start
-    	                        from: 0,
-    	                        // The value where it should end
-    	                        to: 1
-    	                    }
-    	                });
-    	            } else if (data.type === 'label' && data.axis === 'x') {
-    	                data.element.animate({
-    	                    y: {
-    	                        begin: seq * delays,
-    	                        dur: durations,
-    	                        from: data.y + 100,
-    	                        to: data.y,
-    	                        // We can specify an easing function from Chartist.Svg.Easing
-    	                        easing: 'easeInOutBack'
-    	                    }
-    	                });
-    	            } else if (data.type === 'label' && data.axis === 'y') {
-    	                data.element.animate({
-    	                    x: {
-    	                        begin: seq * delays,
-    	                        dur: durations,
-    	                        from: data.x - 100,
-    	                        to: data.x,
-    	                        easing: 'easeInOutBack'
-    	                    }
-    	                });
-    	            } else if (data.type === 'point') {
-    	                data.element.animate({
-    	                    x1: {
-    	                        begin: seq * delays,
-    	                        dur: durations,
-    	                        from: data.x - 10,
-    	                        to: data.x,
-    	                        easing: 'easeOutQuart'
-    	                    },
-    	                    x2: {
-    	                        begin: seq * delays,
-    	                        dur: durations,
-    	                        from: data.x - 10,
-    	                        to: data.x,
-    	                        easing: 'easeOutQuart'
-    	                    },
-    	                    opacity: {
-    	                        begin: seq * delays,
-    	                        dur: durations,
-    	                        from: 0,
-    	                        to: 1,
-    	                        easing: 'easeOutQuart'
-    	                    }
-    	                });
-    	            } else if (data.type === 'grid') {
-    	                // Using data.axis we get x or y which we can use to construct our animation definition objects
-    	                var pos1Animation = {
-    	                    begin: seq * delays,
-    	                    dur: durations,
-    	                    from: data[data.axis + '1'] - 30,
-    	                    to: data[data.axis + '1'],
-    	                    easing: 'easeOutQuart'
-    	                };
-
-    	                var pos2Animation = {
-    	                    begin: seq * delays,
-    	                    dur: durations,
-    	                    from: data[data.axis + '2'] - 100,
-    	                    to: data[data.axis + '2'],
-    	                    easing: 'easeOutQuart'
-    	                };
-
-    	                var animations = {};
-    	                animations[data.axis + '1'] = pos1Animation;
-    	                animations[data.axis + '2'] = pos2Animation;
-    	                animations['opacity'] = {
-    	                    begin: seq * delays,
-    	                    dur: durations,
-    	                    from: 0,
-    	                    to: 1,
-    	                    easing: 'easeOutQuart'
-    	                };
-
-    	                data.element.animate(animations);
-    	            }
-    	        });
-
-
+  
 
     	    });
 </script>
@@ -384,5 +279,13 @@
 
 <div class="ct-chart ct-perfect-fourth" id="animated-chart"></div>
 <h2>Northampton Hospital Hill Difficulty</h2>
+@*<div style = "width:10px; height:10px; background-color:yellow;"></div><p style="display:inline;"> birdie</p>
+<div style = "width:10px; height:10px; background-color:red;"></div><p> over par</p>
+<div style = "width:10px; height:10px; background-color:#007acc;"></div><p> par</p>
+*@
+<ul class="legend">
+    <li><span class="superawesome"></span> Birdies</li>
+    <li><span class="awesome"></span> Pars</li>
+    <li><span class="kindaawesome"></span> Over Pars</li>
+</ul>
 <div class="ct-chart ct-perfect-fourth" id="bar-chart"></div>
-
